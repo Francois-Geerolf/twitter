@@ -25,5 +25,5 @@ library("zoo")
         legend.title = element_blank())
 
 
-ggsave("1487713516127768576.png", height = 1.25*3.375, width = 1.25*6)
+ggsave("1487713516127768576.png", height = 1.25*3.375, width = 1.25*6, bg = "white")
 ggsave("1487713516127768576.pdf", height = 1.25*3.375, width = 1.25*6)
