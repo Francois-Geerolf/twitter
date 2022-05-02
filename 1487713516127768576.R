@@ -20,7 +20,8 @@ library("zoo")
   scale_x_date(breaks = seq(1960, 2023, 1) %>% paste0("-01-01") %>% as.Date,
                labels = date_format("%Y")) +
   scale_y_log10(breaks = seq(0, 120, 1)) +
-  xlab("") + ylab("Emploi salarié en fin de trimestre \n France métropolitaine (100 = 2016-Q1)") +  theme_minimal() +
+  xlab("") + ylab("Emploi salarié en fin de trimestre \n France métropolitaine (100 = 2016-Q1)") +
+  theme_minimal() +
   theme(legend.position = c(0.4, 0.9),
         legend.title = element_blank())
 
