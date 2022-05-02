@@ -10,6 +10,8 @@ Par exemple, pour l'emploi salarié en fin de trimestre, France Métropolitaine,
 - Le fichier pdf: [1487713516127768576.pdf](1487713516127768576.pdf)
 - Le fichier png: [1487713516127768576.png](1487713516127768576.png)
 
+![Emploi salarié en fin de trimestre](1487713516127768576.png)
+
 Quelques autres exemples:
  
 - Exportations Nettes, % du PIB. [tweet](https://twitter.com/FrancoisGeerolf/status/1487364702841749504) / [R](1487364702841749504.R) / [png](1487364702841749504.png) / [pdf](1487364702841749504.pdf)

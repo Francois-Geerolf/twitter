@@ -13,7 +13,7 @@ library("zoo")
   as_tibble %>%
   mutate(OBS_VALUE = OBS_VALUE %>% as.numeric,
          TIME_PERIOD = TIME_PERIOD %>% as.yearqtr(format = "%Y-Q%q") %>% as.Date) %>%
-  select(IDBANK, TIME_PERIOD, OBS_VALUE) %>%
+  select(IDBANK, TIME_PERIOD, OBS_VALUE) %>%1519713704857718784
   spread(IDBANK, OBS_VALUE) %>%
   transmute(TIME_PERIOD,
             `Biens` = (`010565588` - `010565630`) / `010565707`,
