@@ -15,4 +15,8 @@ Quelques autres exemples:
 - Exportations Nettes, % du PIB. [tweet](https://twitter.com/FrancoisGeerolf/status/1487364702841749504) / [R](1487364702841749504.R) / [png](1487364702841749504.png) / [pdf](1487364702841749504.pdf)
 
 ![Exportations Nettes](1487364702841749504.png)
+ 
+- Indice de Référence des Loyers. [tweet](https://twitter.com/FrancoisGeerolf/status/1519713704857718784) / [R](1519713704857718784.R) / [png](1519713704857718784.png) / [pdf](1519713704857718784.pdf)
+
+![Indice de Référence des Loyers](1519713704857718784.png)
 
