@@ -2,6 +2,7 @@ library("rsdmx")
 library("tidyverse")
 library("scales")
 library("viridis")
+library("zoo")
 
 # @FrancoisGeerolf, status: 1487364702841749504
 # https://twitter.com/FrancoisGeerolf/status/1487364702841749504
@@ -29,3 +30,7 @@ library("viridis")
   theme(legend.position = c(0.75, 0.9),
         legend.title = element_blank()) + 
   geom_hline(yintercept = 0, linetype = "dashed")
+
+
+ggsave("1487364702841749504.png", height = 1.25*3.375, width = 1.25*6)
+ggsave("1487364702841749504.pdf", height = 1.25*3.375, width = 1.25*6)
