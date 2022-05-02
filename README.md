@@ -14,7 +14,7 @@ Quelques autres exemples:
  
 - Exportations Nettes, % du PIB. [tweet](https://twitter.com/FrancoisGeerolf/status/1487364702841749504) / [R](1487364702841749504.R) / [png](1487364702841749504.png) / [pdf](1487364702841749504.pdf)
 
-![1487364702841749504.pdf]
+![Exportations Nettes](1487364702841749504.pdf)
 
 - Valeur du point d'indice de la fonction publique. [tweet](https://twitter.com/FrancoisGeerolf/status/1503433661219319814) / [R](1503433661219319814.R) / [png](1503433661219319814.png) / [pdf](1503433661219319814.pdf)
 
