@@ -4,6 +4,12 @@ Répliquer quelques graphiques présentés sur le compte Twitter [@FrancoisGeero
 
 Pour chaque statut de tweet n°xxx, le tweet est disponible via l'URL <https://twitter.com/FrancoisGeerolf/status/xxx>, le fichier de réplication R est xxx.R, le pdf en format pdf (vectoriel, éditable) xxx.pdf, le graphique en format png xxx.png. Me contacter si cela ne fonctionne pas, ou si vous voyez une erreur.
 
+## Production Industrielle depuis mai 2017
+
+![Production Industrielle depuis mai 2017](1816121032928874928.png)
+
+## Autre exemples plus anciens
+
 Par exemple, pour l'emploi salarié en fin de trimestre, France Métropolitaine, depuis le début du 1er mandat d'Emmanuel Macron (2ème trimestre 2017), qui est le numéro :
 - Le tweet: <https://twitter.com/FrancoisGeerolf/status/1487713516127768576>
 - Le fichier R: [1487713516127768576.R](1487713516127768576.R)
