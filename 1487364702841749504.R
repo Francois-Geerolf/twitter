@@ -7,20 +7,20 @@ library("zoo")
 # @FrancoisGeerolf, status: 1487364702841749504
 # https://twitter.com/FrancoisGeerolf/status/1487364702841749504
 
-"010565588+010565630+010565590+010565632+010565592+010565634+010565707" %>%
-  paste0("https://www.bdm.insee.fr/series/sdmx/data/SERIES_BDM/", .) %>%
-  readSDMX %>%
-  as_tibble %>%
-  mutate(OBS_VALUE = OBS_VALUE %>% as.numeric,
-         TIME_PERIOD = TIME_PERIOD %>% as.yearqtr(format = "%Y-Q%q") %>% as.Date) %>%
-  select(IDBANK, TIME_PERIOD, OBS_VALUE) %>%1519713704857718784
-  spread(IDBANK, OBS_VALUE) %>%
+"010565588+010565630+010565590+010565632+010565592+010565634+010565707" |>
+  paste0("https://www.bdm.insee.fr/series/sdmx/data/SERIES_BDM/", a = _) |>
+  readSDMX() |>
+  as_tibble() |>
+  mutate(OBS_VALUE = OBS_VALUE |> as.numeric(),
+         TIME_PERIOD = as.Date(as.yearqtr(TIME_PERIOD, format = "%Y-Q%q"))) |>
+  select(IDBANK, TIME_PERIOD, OBS_VALUE) |>
+  spread(IDBANK, OBS_VALUE) |>
   transmute(TIME_PERIOD,
             `Biens` = (`010565588` - `010565630`) / `010565707`,
             `Biens manufacturés ` = (`010565590` - `010565632`) / `010565707`,
-            `Biens industriels` = (`010565592` - `010565634`) / `010565707`) %>%
-  gather(Cna_produit, OBS_VALUE, -TIME_PERIOD) %>%
-  ggplot + geom_line(aes(x = TIME_PERIOD, y = OBS_VALUE, color = Cna_produit)) +
+            `Biens industriels` = (`010565592` - `010565634`) / `010565707`) |>
+  gather(Cna_produit, OBS_VALUE, -TIME_PERIOD) |>
+  ggplot() + geom_line(aes(x = TIME_PERIOD, y = OBS_VALUE, color = Cna_produit)) +
   theme_minimal() + xlab("") + ylab("Exportations Nettes (% du PIB)") +
   scale_x_date(breaks = seq(1940, 2025, 10) %>% paste0("-01-01") %>% as.Date,
                labels = date_format("%Y")) +
