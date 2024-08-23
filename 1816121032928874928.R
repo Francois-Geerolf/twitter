@@ -15,7 +15,8 @@ data |>
   ggplot() + ylab("Indice de Production Industrielle vs. Mai 2017\nhors Mars-Juin 2020") + xlab("") + theme_minimal() +
   geom_line(aes(x = date, y = OBS_VALUE, color = Naf2))  +
   geom_label_repel(data = data |>
-                     filter(date == max(date)), aes(x = date, y = OBS_VALUE, label = percent(OBS_VALUE/100-1, acc = .1), color = Naf2)) +
+                     filter(date == max(date)),
+                   aes(x = date, y = OBS_VALUE, label = percent(OBS_VALUE/100-1, acc = .1), color = Naf2)) +
   geom_hline(yintercept = 100, linetype = "dashed") +
   scale_x_date(breaks = as.Date(paste0(seq(1920, 2100, 1), "-01-01")),
                labels = date_format("%Y")) +
@@ -26,8 +27,6 @@ data |>
   geom_rect(data = data_frame(start = as.Date("2020-02-01"), 
                               end = as.Date("2020-07-01")), 
             aes(xmin = start, xmax = end, ymin = 0, ymax = +Inf), fill = viridis(4)[4], alpha = 0.2)
-
-
 
 ggsave("1816121032928874928.png", height = 1.25*3.375, width = 1.25*6, bg = "white")
 ggsave("1816121032928874928.pdf", height = 1.25*3.375, width = 1.25*6)

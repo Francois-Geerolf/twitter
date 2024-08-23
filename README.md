@@ -4,6 +4,12 @@ Répliquer quelques graphiques présentés sur le compte Twitter [@FrancoisGeero
 
 Pour chaque statut de tweet n°xxx, le tweet est disponible via l'URL <https://twitter.com/FrancoisGeerolf/status/xxx>, le fichier de réplication R est xxx.R, le pdf en format pdf (vectoriel, éditable) xxx.pdf, le graphique en format png xxx.png. Me contacter si cela ne fonctionne pas, ou si vous voyez une erreur.
 
+## Indice des prix dans la grande distribution depuis octobre 2021
+
+[Tweet](https://x.com/FrancoisGeerolf/status/1826530570236469418)
+
+![Indice des prix dans la grande distribution depuis octobre 2021](1826530570236469418.png)
+
 ## Production Industrielle depuis mai 2017
 
 ![Production Industrielle depuis mai 2017](1816121032928874928.png)
