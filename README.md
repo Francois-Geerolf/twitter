@@ -14,11 +14,12 @@ pour que j’ajoute le code d’autres graphiques.
 
 <table>
 <colgroup>
-<col style="width: 78%" />
-<col style="width: 7%" />
+<col style="width: 57%" />
+<col style="width: 5%" />
+<col style="width: 2%" />
 <col style="width: 3%" />
-<col style="width: 5%" />
-<col style="width: 5%" />
+<col style="width: 3%" />
+<col style="width: 27%" />
 </colgroup>
 <thead>
 <tr class="header">
@@ -27,6 +28,7 @@ pour que j’ajoute le code d’autres graphiques.
 <th style="text-align: left;">R</th>
 <th style="text-align: left;">png</th>
 <th style="text-align: left;">pdf</th>
+<th style="text-align: left;">image</th>
 </tr>
 </thead>
 <tbody>
@@ -41,6 +43,7 @@ href="https://github.com/Francois-Geerolf/twitter/blob/main/1832855610448048625.
 href="https://github.com/Francois-Geerolf/twitter/blob/main/1832855610448048625.png">png</a></td>
 <td style="text-align: left;"><a
 href="https://github.com/Francois-Geerolf/twitter/blob/main/1832855610448048625.pdf">pdf</a></td>
+<td style="text-align: left;"><img src="1832855610448048625.png" /></td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Hausse des prix dans la grande
@@ -53,6 +56,7 @@ href="https://github.com/Francois-Geerolf/twitter/blob/main/1826530570236469418.
 href="https://github.com/Francois-Geerolf/twitter/blob/main/1826530570236469418.png">png</a></td>
 <td style="text-align: left;"><a
 href="https://github.com/Francois-Geerolf/twitter/blob/main/1826530570236469418.pdf">pdf</a></td>
+<td style="text-align: left;"><img src="1826530570236469418.png" /></td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Indice de production industrielle vs. Mai
@@ -65,6 +69,7 @@ href="https://github.com/Francois-Geerolf/twitter/blob/main/1816121032928874928.
 href="https://github.com/Francois-Geerolf/twitter/blob/main/1816121032928874928.png">png</a></td>
 <td style="text-align: left;"><a
 href="https://github.com/Francois-Geerolf/twitter/blob/main/1816121032928874928.pdf">pdf</a></td>
+<td style="text-align: left;"><img src="1816121032928874928.png" /></td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Inflation des loyers</td>
@@ -76,6 +81,7 @@ href="https://github.com/Francois-Geerolf/twitter/blob/main/1519713704857718784.
 href="https://github.com/Francois-Geerolf/twitter/blob/main/1519713704857718784.png">png</a></td>
 <td style="text-align: left;"><a
 href="https://github.com/Francois-Geerolf/twitter/blob/main/1519713704857718784.pdf">pdf</a></td>
+<td style="text-align: left;"><img src="1519713704857718784.png" /></td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Emploi Trimestriel (2016T1-)</td>
@@ -87,6 +93,7 @@ href="https://github.com/Francois-Geerolf/twitter/blob/main/1487713516127768576.
 href="https://github.com/Francois-Geerolf/twitter/blob/main/1487713516127768576.png">png</a></td>
 <td style="text-align: left;"><a
 href="https://github.com/Francois-Geerolf/twitter/blob/main/1487713516127768576.pdf">pdf</a></td>
+<td style="text-align: left;"><img src="1487713516127768576.png" /></td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Exportations nettes (% du PIB)</td>
@@ -98,6 +105,7 @@ href="https://github.com/Francois-Geerolf/twitter/blob/main/1487364702841749504.
 href="https://github.com/Francois-Geerolf/twitter/blob/main/1487364702841749504.png">png</a></td>
 <td style="text-align: left;"><a
 href="https://github.com/Francois-Geerolf/twitter/blob/main/1487364702841749504.pdf">pdf</a></td>
+<td style="text-align: left;"><img src="1487364702841749504.png" /></td>
 </tr>
 </tbody>
 </table>

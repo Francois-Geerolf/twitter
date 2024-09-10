@@ -26,8 +26,9 @@ dplyr::tibble(R = list.files(pattern = "\\.R$")) |>
                 tweet = paste0("[tweet](https://twitter.com/FrancoisGeerolf/status/", n, ")"),
                 R = paste0("[R](https://github.com/Francois-Geerolf/twitter/blob/main/", n, ".R)"),
                 png = paste0("[png](https://github.com/Francois-Geerolf/twitter/blob/main/", n, ".png)"),
-                pdf = paste0("[pdf](https://github.com/Francois-Geerolf/twitter/blob/main/", n, ".pdf)")) |>
-  dplyr::select(Titre, tweet, R, png, pdf) |>
+                pdf = paste0("[pdf](https://github.com/Francois-Geerolf/twitter/blob/main/", n, ".pdf)"),
+                image = paste0("![](", n, ".png)")) |>
+  dplyr::select(Titre, tweet, R, png, pdf, image) |>
   knitr::kable()
 ```
 
