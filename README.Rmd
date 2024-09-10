@@ -18,14 +18,18 @@ Me contacter si cela ne fonctionne pas, si vous voyez une erreur, ou pour que j'
 ## Liste complète
 
 ```{r echo = FALSE, results='asis'}
-knitr::kable(head(iris[,1:3]), "pipe")
+dplyr::tibble(R = list.files(pattern = "\\.R$")) |>
+  dplyr::mutate(n = tools::file_path_sans_ext(R),
+                Title = readr::read_lines(R, skip = 0, n_max = 1),
+                Title = gsub("# ", "", Title)) |>
+  knitr::kable()
 ```
 
 ## Quelques exemples récents
 
 ### Inflation Juillet 2021-2024: Ensemble IPCH, Energie de la maison, Alimentation
 
-![](1833357106319130718.png)
+![](1832855610448048625.png)
 
 ### Indice des prix dans la grande distribution depuis octobre 2021
 

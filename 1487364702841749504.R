@@ -22,7 +22,7 @@ library("zoo")
             `Biens industriels` = (`010565592` - `010565634`) / `010565707`) |>
   gather(Cna_produit, OBS_VALUE, -TIME_PERIOD) |>
   ggplot() + geom_line(aes(x = TIME_PERIOD, y = OBS_VALUE, color = Cna_produit)) +
-  theme_minimal() + xlab("") + ylab("Exportations Nettes (% du PIB)") +
+  theme_minimal() + xlab("") + ylab("") +
   scale_x_date(breaks = seq(1940, 2025, 10) %>% paste0("-01-01") %>% as.Date,
                labels = date_format("%Y")) +
   scale_y_continuous(breaks = 0.01*seq(-100, 500, 1),
