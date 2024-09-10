@@ -19,9 +19,15 @@ Me contacter si cela ne fonctionne pas, si vous voyez une erreur, ou pour que j'
 
 ```{r echo = FALSE, results='asis'}
 dplyr::tibble(R = list.files(pattern = "\\.R$")) |>
+  dplyr::arrange(desc(R))  |>
   dplyr::mutate(n = tools::file_path_sans_ext(R),
-                Title = readr::read_lines(R, skip = 0, n_max = 1),
-                Title = gsub("# ", "", Title)) |>
+                Titre = readr::read_lines(R, skip = 0, n_max = 1),
+                Titre = gsub("# ", "", Titre),
+                tweet = paste0("[tweet](https://twitter.com/FrancoisGeerolf/status/", n, ")"),
+                R = paste0("[R](https://github.com/Francois-Geerolf/twitter/blob/main/", n, ".R)"),
+                png = paste0("[png](https://github.com/Francois-Geerolf/twitter/blob/main/", n, ".png)"),
+                pdf = paste0("[pdf](https://github.com/Francois-Geerolf/twitter/blob/main/", n, ".pdf)")) |>
+  dplyr::select(Titre, tweet, R, png, pdf) |>
   knitr::kable()
 ```
 
