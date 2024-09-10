@@ -1,10 +1,11 @@
+# Emploi Trimestriel (2016T1-)
+# @FrancoisGeerolf, status: 1487713516127768576
+# https://twitter.com/FrancoisGeerolf/status/1487713516127768576
+
 library("rsdmx")
 library("tidyverse")
 library("scales")
 library("zoo")
-
-# @FrancoisGeerolf, status: 1487713516127768576
-# https://twitter.com/FrancoisGeerolf/status/1487713516127768576
 
 "001791539+001791541+010599703+010600319" %>%
   paste0("https://www.bdm.insee.fr/series/sdmx/data/SERIES_BDM/", ., "?startPeriod=2016") %>%

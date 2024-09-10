@@ -1,11 +1,12 @@
+# Exportations nettes (% du PIB)
+# @FrancoisGeerolf, status: 1487364702841749504
+# https://twitter.com/FrancoisGeerolf/status/1487364702841749504
+
 library("rsdmx")
 library("tidyverse")
 library("scales")
 library("viridis")
 library("zoo")
-
-# @FrancoisGeerolf, status: 1487364702841749504
-# https://twitter.com/FrancoisGeerolf/status/1487364702841749504
 
 "010565588+010565630+010565590+010565632+010565592+010565634+010565707" |>
   paste0("https://www.bdm.insee.fr/series/sdmx/data/SERIES_BDM/", a = _) |>

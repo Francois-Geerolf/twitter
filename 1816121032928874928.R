@@ -1,3 +1,7 @@
+# Indice de production industrielle vs. Mai 2017
+# @FrancoisGeerolf, status: 1816121032928874928
+# https://twitter.com/FrancoisGeerolf/status/1816121032928874928
+
 library("tidyverse")
 
 data <- "010768261+010768307" |>

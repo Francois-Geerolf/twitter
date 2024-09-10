@@ -1,4 +1,9 @@
+# Inflation Juillet 2021-2024: IPCH, énergie, alimentation
+# @FrancoisGeerolf
+# https://twitter.com/FrancoisGeerolf/status/1832855610448048625
+
 library("tidyverse")
+library("scales")
 
 data <- "001762445+001762847+001759971" |>
   paste0("https://www.bdm.insee.fr/series/sdmx/data/SERIES_BDM/", a = _) |>
@@ -29,5 +34,5 @@ data |>
              aes(x = date, y = OBS_VALUE, label = round(OBS_VALUE, 1), color = Coicop2016), 
              fontface ="plain", size = 3)
 
-ggsave("1833357106319130718.png", height = 1.25*3.375, width = 1.25*6, bg = "white")
-ggsave("1833357106319130718.pdf", height = 1.25*3.375, width = 1.25*6)
+ggsave("1832855610448048625.png", height = 1.25*3.375, width = 1.25*6, bg = "white")
+ggsave("1832855610448048625.pdf", height = 1.25*3.375, width = 1.25*6)

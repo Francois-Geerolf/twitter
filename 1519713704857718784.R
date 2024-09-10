@@ -1,10 +1,11 @@
+# Inflation des loyers
+# @FrancoisGeerolf, status: 1519713704857718784
+# https://twitter.com/FrancoisGeerolf/status/1519713704857718784
+
 library("rsdmx")
 library("tidyverse")
 library("scales")
 library("zoo")
-
-# @FrancoisGeerolf, status: 1519713704857718784
-# https://twitter.com/FrancoisGeerolf/status/1519713704857718784
 
 "001763862" %>%
   paste0("https://www.bdm.insee.fr/series/sdmx/data/SERIES_BDM/", ., "?startPeriod=2006") %>%

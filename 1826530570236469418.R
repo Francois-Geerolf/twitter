@@ -1,3 +1,8 @@
+# Hausse des prix dans la grande distribution (Octobre 2021 -)
+
+
+# https://twitter.com/FrancoisGeerolf/status/1826530570236469418
+
 library("tidyverse")
 
 data <- "001768737+001768738+001768739+001768740" |>
