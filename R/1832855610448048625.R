@@ -12,8 +12,10 @@ data <- "001762445+001762847+001759971" |>
   as_tibble()  |>
   mutate(date = as.Date(paste0(TIME_PERIOD, "-01")),
          OBS_VALUE = as.numeric(OBS_VALUE)) |>
-  filter(date >= as.Date("2021-07-01"),
-         date <= as.Date("2024-07-01")) |>
+  group_by(date) |>
+  filter(n() == 3) |>
+  ungroup() |>
+  filter(date >= as.Date("2021-07-01")) |>
   # Extraire après le dernier tiret -----
   mutate(Coicop2016 = str_extract(TITLE_FR, "[^-]+$")) |>
   arrange(date) |>
