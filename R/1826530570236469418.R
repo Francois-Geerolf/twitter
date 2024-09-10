@@ -1,8 +1,5 @@
 # Hausse des prix dans la grande distribution (Octobre 2021 -)
 
-
-# https://twitter.com/FrancoisGeerolf/status/1826530570236469418
-
 library("tidyverse")
 
 data <- "001768737+001768738+001768739+001768740" |>
@@ -28,6 +25,3 @@ data |>
                      labels = percent(seq(-100, 500, 2)/100-1)) +
   scale_x_date(breaks = "2 months",
                labels = date_format("%b %Y"))
-
-ggsave("1826530570236469418.png", height = 1.25*3.375, width = 1.25*6, bg = "white")
-ggsave("1826530570236469418.pdf", height = 1.25*3.375, width = 1.25*6)

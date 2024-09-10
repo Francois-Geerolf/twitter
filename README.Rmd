@@ -8,10 +8,10 @@ output: md_document
 Codes pour répliquer quelques graphiques présentés sur le compte Twitter [@FrancoisGeerolf](https://twitter.com/FrancoisGeerolf). La liste des codes:
 
 ```{r echo = FALSE, results='asis'}
-dplyr::tibble(R = list.files(pattern = "\\.R$")) |>
-  dplyr::arrange(desc(R))  |>
-  dplyr::mutate(n = tools::file_path_sans_ext(R),
-                Titre = readr::read_lines(R, skip = 0, n_max = 1),
+dplyr::tibble(R = list.files(path = "R", pattern = "\\.R$")) |>
+  dplyr::arrange(desc(R)) |>
+  dplyr::mutate(n = tools::file_path_sans_ext(paste0("R/", R)),
+                Titre = readr::read_lines(paste0("R/", R), skip = 0, n_max = 1),
                 Titre = gsub("# ", "", Titre),
                 tweet = paste0("[tweet](https://twitter.com/FrancoisGeerolf/status/", n, ")"),
                 R = paste0("[R](https://github.com/Francois-Geerolf/twitter/blob/main/", n, ".R)"),
@@ -21,10 +21,9 @@ dplyr::tibble(R = list.files(pattern = "\\.R$")) |>
   knitr::kable()
 ```
 
-Pour chaque statut de tweet n°xxx:
+Cette table donne chaque statut de tweet n°xxx disponible via l'URL <https://twitter.com/FrancoisGeerolf/status/xxx>
 - le graphique en format png xxx.png.
-- le tweet (et le graphique original) est disponible via l'URL <https://twitter.com/FrancoisGeerolf/status/xxx>
-- le fichier de réplication R est xxx.R
-- le pdf en format pdf (vectoriel, éditable) xxx.pdf
+- le fichier de réplication R xxx.R.
+- le pdf en format pdf xxx.pdf.
 
-Me contacter si cela ne fonctionne pas, si vous voyez une erreur, ou pour que j'ajoute le code d'autres graphiques.
+Me contacter si cela ne fonctionne pas, s'il y a une erreur, ou pour que j'ajoute le code d'autres graphiques.

@@ -33,7 +33,3 @@ library("zoo")
         legend.key.size= unit(1.0, 'cm')) +
   scale_y_continuous(breaks = 0.01*seq(-100, 300, 0.5),
                      labels = percent_format(accuracy = .1, prefix = ""))
-
-
-ggsave("1519713704857718784.png", height = 1.25*3.375, width = 1.25*6, bg = "white")
-ggsave("1519713704857718784.pdf", height = 1.25*3.375, width = 1.25*6)

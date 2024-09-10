@@ -3,6 +3,7 @@
 # https://twitter.com/FrancoisGeerolf/status/1816121032928874928
 
 library("tidyverse")
+library("ggrepel")
 
 data <- "010768261+010768307" |>
   paste0("https://www.bdm.insee.fr/series/sdmx/data/SERIES_BDM/", a = _) |>
@@ -28,9 +29,6 @@ data |>
         legend.title = element_blank()) +
   scale_y_log10(breaks = seq(90, 110, 1),
                 labels = percent(seq(90, 110, 1)/100 - 1, 1)) +
-  geom_rect(data = data_frame(start = as.Date("2020-02-01"), 
+  geom_rect(data = tibble(start = as.Date("2020-02-01"), 
                               end = as.Date("2020-07-01")), 
             aes(xmin = start, xmax = end, ymin = 0, ymax = +Inf), fill = viridis(4)[4], alpha = 0.2)
-
-ggsave("1816121032928874928.png", height = 1.25*3.375, width = 1.25*6, bg = "white")
-ggsave("1816121032928874928.pdf", height = 1.25*3.375, width = 1.25*6)

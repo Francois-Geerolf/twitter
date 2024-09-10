@@ -1,6 +1,7 @@
 # Inflation Juillet 2021-2024: IPCH, énergie, alimentation
 # @FrancoisGeerolf
 # https://twitter.com/FrancoisGeerolf/status/1832855610448048625
+n <- "1832855610448048625"
 
 library("tidyverse")
 library("scales")
@@ -33,6 +34,3 @@ data |>
   geom_label(data = . %>% filter(date == max(date)),
              aes(x = date, y = OBS_VALUE, label = round(OBS_VALUE, 1), color = Coicop2016), 
              fontface ="plain", size = 3)
-
-ggsave("1832855610448048625.png", height = 1.25*3.375, width = 1.25*6, bg = "white")
-ggsave("1832855610448048625.pdf", height = 1.25*3.375, width = 1.25*6)
