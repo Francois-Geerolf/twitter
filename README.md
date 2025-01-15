@@ -20,16 +20,6 @@ codes:
 <tbody>
 <tr class="odd">
 <td style="text-align: left;"><a
-href="https://x.com/FrancoisGeerolf/status/new">tweet</a></td>
-<td style="text-align: left;"><img src="png/new.png"
-alt="Défaillances d’entreprise" /></td>
-<td style="text-align: left;"><a
-href="https://github.com/Francois-Geerolf/twitter/blob/main/R/new.R">R</a></td>
-<td style="text-align: left;"><a
-href="https://github.com/Francois-Geerolf/twitter/blob/main/pdf/new.pdf">pdf</a></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;"><a
 href="https://x.com/FrancoisGeerolf/status/1879257670223573007">tweet</a></td>
 <td style="text-align: left;"><img src="png/1879257670223573007.png"
 alt="Naissances et décès: 627 895 naissances vs. 627 894 décès, selon l’Insee !" /></td>
@@ -38,7 +28,7 @@ href="https://github.com/Francois-Geerolf/twitter/blob/main/R/187925767022357300
 <td style="text-align: left;"><a
 href="https://github.com/Francois-Geerolf/twitter/blob/main/pdf/1879257670223573007.pdf">pdf</a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;"><a
 href="https://x.com/FrancoisGeerolf/status/1832855610448048625">tweet</a></td>
 <td style="text-align: left;"><img src="png/1832855610448048625.png"
@@ -48,7 +38,7 @@ href="https://github.com/Francois-Geerolf/twitter/blob/main/R/183285561044804862
 <td style="text-align: left;"><a
 href="https://github.com/Francois-Geerolf/twitter/blob/main/pdf/1832855610448048625.pdf">pdf</a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;"><a
 href="https://x.com/FrancoisGeerolf/status/1826530570236469418">tweet</a></td>
 <td style="text-align: left;"><img src="png/1826530570236469418.png"
@@ -58,7 +48,7 @@ href="https://github.com/Francois-Geerolf/twitter/blob/main/R/182653057023646941
 <td style="text-align: left;"><a
 href="https://github.com/Francois-Geerolf/twitter/blob/main/pdf/1826530570236469418.pdf">pdf</a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;"><a
 href="https://x.com/FrancoisGeerolf/status/1816121032928874928">tweet</a></td>
 <td style="text-align: left;"><img src="png/1816121032928874928.png"
@@ -68,7 +58,7 @@ href="https://github.com/Francois-Geerolf/twitter/blob/main/R/181612103292887492
 <td style="text-align: left;"><a
 href="https://github.com/Francois-Geerolf/twitter/blob/main/pdf/1816121032928874928.pdf">pdf</a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;"><a
 href="https://x.com/FrancoisGeerolf/status/1519713704857718784">tweet</a></td>
 <td style="text-align: left;"><img src="png/1519713704857718784.png"
@@ -78,7 +68,7 @@ href="https://github.com/Francois-Geerolf/twitter/blob/main/R/151971370485771878
 <td style="text-align: left;"><a
 href="https://github.com/Francois-Geerolf/twitter/blob/main/pdf/1519713704857718784.pdf">pdf</a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;"><a
 href="https://x.com/FrancoisGeerolf/status/1487713516127768576">tweet</a></td>
 <td style="text-align: left;"><img src="png/1487713516127768576.png"
@@ -88,7 +78,7 @@ href="https://github.com/Francois-Geerolf/twitter/blob/main/R/148771351612776857
 <td style="text-align: left;"><a
 href="https://github.com/Francois-Geerolf/twitter/blob/main/pdf/1487713516127768576.pdf">pdf</a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;"><a
 href="https://x.com/FrancoisGeerolf/status/1487364702841749504">tweet</a></td>
 <td style="text-align: left;"><img src="png/1487364702841749504.png"
