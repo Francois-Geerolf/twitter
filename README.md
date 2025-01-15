@@ -4,10 +4,10 @@ codes:
 
 <table>
 <colgroup>
-<col style="width: 8%" />
-<col style="width: 82%" />
+<col style="width: 6%" />
+<col style="width: 85%" />
+<col style="width: 3%" />
 <col style="width: 4%" />
-<col style="width: 5%" />
 </colgroup>
 <thead>
 <tr class="header">
@@ -18,6 +18,26 @@ codes:
 </tr>
 </thead>
 <tbody>
+<tr class="odd">
+<td style="text-align: left;"><a
+href="https://x.com/FrancoisGeerolf/status/new">tweet</a></td>
+<td style="text-align: left;"><img src="png/new.png"
+alt="Défaillances d’entreprise" /></td>
+<td style="text-align: left;"><a
+href="https://github.com/Francois-Geerolf/twitter/blob/main/R/new.R">R</a></td>
+<td style="text-align: left;"><a
+href="https://github.com/Francois-Geerolf/twitter/blob/main/pdf/new.pdf">pdf</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a
+href="https://x.com/FrancoisGeerolf/status/1879257670223573007">tweet</a></td>
+<td style="text-align: left;"><img src="png/1879257670223573007.png"
+alt="Naissances et décès: 627 895 naissances vs. 627 894 décès, selon l’Insee !" /></td>
+<td style="text-align: left;"><a
+href="https://github.com/Francois-Geerolf/twitter/blob/main/R/1879257670223573007.R">R</a></td>
+<td style="text-align: left;"><a
+href="https://github.com/Francois-Geerolf/twitter/blob/main/pdf/1879257670223573007.pdf">pdf</a></td>
+</tr>
 <tr class="odd">
 <td style="text-align: left;"><a
 href="https://x.com/FrancoisGeerolf/status/1832855610448048625">tweet</a></td>
