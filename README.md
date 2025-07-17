@@ -1,10 +1,12 @@
 Codes permettant de répliquer plusieurs graphiques partagés sur le
 compte Twitter [@FrancoisGeerolf](https://twitter.com/FrancoisGeerolf).
 
-Chaque ligne de la table correspond à un tweet contenant : - le lien
-vers le **tweet** original, - une **version mise à jour du graphique**
-(`.png`), - le **code R de réplication** (`.R`), - la **version PDF** du
-graphique (`.pdf`).
+Chaque ligne de la table correspond à un tweet contenant :
+
+-   le lien vers le **tweet** original,
+-   une **version mise à jour du graphique** (`.png`),
+-   le **code R de réplication** (`.R`),
+-   la **version PDF** du graphique (`.pdf`).
 
 N’hésitez pas à me contacter si un lien ne fonctionne pas, si vous
 constatez une erreur, ou si vous souhaitez que j’ajoute d’autres

@@ -7,6 +7,7 @@ output: md_document
 Codes permettant de répliquer plusieurs graphiques partagés sur le compte Twitter [@FrancoisGeerolf](https://twitter.com/FrancoisGeerolf).
 
 Chaque ligne de la table correspond à un tweet contenant :
+
 - le lien vers le **tweet** original,
 - une **version mise à jour du graphique** (`.png`),
 - le **code R de réplication** (`.R`),
