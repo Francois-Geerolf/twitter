@@ -10,17 +10,6 @@ N’hésitez pas à me contacter si un lien ne fonctionne pas, si vous
 constatez une erreur, ou si vous souhaitez que j’ajoute d’autres
 graphiques.
 
-    ## 
-    ## Attaching package: 'dplyr'
-
-    ## The following objects are masked from 'package:stats':
-    ## 
-    ##     filter, lag
-
-    ## The following objects are masked from 'package:base':
-    ## 
-    ##     intersect, setdiff, setequal, union
-
 <table>
 <colgroup>
 <col style="width: 6%" />

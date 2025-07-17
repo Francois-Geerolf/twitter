@@ -15,7 +15,7 @@ Chaque ligne de la table correspond à un tweet contenant :
 N'hésitez pas à me contacter si un lien ne fonctionne pas, si vous constatez une erreur, ou si vous souhaitez que j’ajoute d’autres graphiques.
 
 
-```{r echo = FALSE, results='asis'}
+```{r echo = FALSE, results='asis', message = F, warning = F}
 library(dplyr)
 library(readr)
 library(tools)
