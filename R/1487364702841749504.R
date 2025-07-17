@@ -5,18 +5,32 @@ library(viridis)
 library(zoo)
 
 # ---- Préparation des données ----
+## Base 2014 (original) ----
 
-idbank_codes <- c(
+idbanks <- c(
   "010565588", "010565630", # Biens
   "010565590", "010565632", # Biens manufacturés
   "010565592", "010565634", # Biens industriels
   "010565707"               # PIB total
 )
 
+## Base 2020 (à jour) ----
+
+idbanks <- c(
+  biens_X = "011795478",
+  biens_M = "011795520", # Biens
+  biens_manuf_X = "011795480", 
+  biens_manuf_M = "011795522", # Biens manufacturés
+  biens_indus_X = "011795482",  # Biens industriels
+  biens_indus_M = "011795524",
+  pib = "011794859"               # PIB total
+)
+
+
 # Construction de l'URL
 url <- paste0(
   "https://www.bdm.insee.fr/series/sdmx/data/SERIES_BDM/",
-  paste(idbank_codes, collapse = "+")
+  paste(idbanks, collapse = "+")
 )
 
 # Import et transformation des données
@@ -31,9 +45,9 @@ data <- url |>
   pivot_wider(names_from = IDBANK, values_from = OBS_VALUE) |>
   transmute(
     TIME_PERIOD,
-    `Biens` = (`010565588` - `010565630`) / `010565707`,
-    `Biens manufacturés` = (`010565590` - `010565632`) / `010565707`,
-    `Biens industriels` = (`010565592` - `010565634`) / `010565707`
+    `Biens` = (get(idbanks["biens_X"]) - get(idbanks["biens_M"])) / get(idbanks["pib"]),
+    `Biens manufacturés` = (get(idbanks["biens_manuf_X"]) - get(idbanks["biens_manuf_M"])) / get(idbanks["pib"]),
+    `Biens industriels` = (get(idbanks["biens_indus_X"]) - get(idbanks["biens_indus_M"])) / get(idbanks["pib"])
   ) |>
   pivot_longer(-TIME_PERIOD, names_to = "Cna_produit", values_to = "OBS_VALUE")
 
