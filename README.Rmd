@@ -13,7 +13,7 @@ Chaque ligne de la table correspond à un tweet contenant :
 - le **code R de réplication** (`.R`),
 - la **version PDF** du graphique (`.pdf`).
 
-N'hésitez pas à me contacter si un lien ne fonctionne pas, si vous constatez une erreur, ou si vous souhaitez que j’ajoute d’autres graphiques.
+Vous pouvez me contacter si un lien ne fonctionne pas, si vous constatez une erreur, si les graphiques ne sont pas suffisamment à jour, ou si vous souhaitez que j’ajoute d’autres graphiques.
 
 
 ```{r echo = FALSE, results='asis', message = F, warning = F}
