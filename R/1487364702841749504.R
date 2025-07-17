@@ -1,3 +1,6 @@
+# Exportations nettes de biens, biens industriels, biens manufacturés
+# https://twitter.com/FrancoisGeerolf/status/1487364702841749504
+
 library(rsdmx)
 library(tidyverse)
 library(scales)
