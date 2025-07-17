@@ -1,6 +1,25 @@
-Codes pour répliquer quelques graphiques présentés sur le compte Twitter
-[@FrancoisGeerolf](https://twitter.com/FrancoisGeerolf). La liste des
-codes:
+Codes permettant de répliquer plusieurs graphiques partagés sur le
+compte Twitter [@FrancoisGeerolf](https://twitter.com/FrancoisGeerolf).
+
+Chaque ligne de la table correspond à un tweet contenant : - le lien
+vers le **tweet** original, - une **version mise à jour du graphique**
+(`.png`), - le **code R de réplication** (`.R`), - la **version PDF** du
+graphique (`.pdf`).
+
+N’hésitez pas à me contacter si un lien ne fonctionne pas, si vous
+constatez une erreur, ou si vous souhaitez que j’ajoute d’autres
+graphiques.
+
+    ## 
+    ## Attaching package: 'dplyr'
+
+    ## The following objects are masked from 'package:stats':
+    ## 
+    ##     filter, lag
+
+    ## The following objects are masked from 'package:base':
+    ## 
+    ##     intersect, setdiff, setequal, union
 
 <table>
 <colgroup>
@@ -10,7 +29,7 @@ codes:
 <col style="width: 4%" />
 </colgroup>
 <thead>
-<tr class="header">
+<tr>
 <th style="text-align: left;">tweet</th>
 <th style="text-align: left;">Graphique (mis à jour)</th>
 <th style="text-align: left;">R</th>
@@ -18,7 +37,7 @@ codes:
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
+<tr>
 <td style="text-align: left;"><a
 href="https://x.com/FrancoisGeerolf/status/1879257670223573007">tweet</a></td>
 <td style="text-align: left;"><img src="png/1879257670223573007.png"
@@ -28,7 +47,7 @@ href="https://github.com/Francois-Geerolf/twitter/blob/main/R/187925767022357300
 <td style="text-align: left;"><a
 href="https://github.com/Francois-Geerolf/twitter/blob/main/pdf/1879257670223573007.pdf">pdf</a></td>
 </tr>
-<tr class="even">
+<tr>
 <td style="text-align: left;"><a
 href="https://x.com/FrancoisGeerolf/status/1832855610448048625">tweet</a></td>
 <td style="text-align: left;"><img src="png/1832855610448048625.png"
@@ -38,7 +57,7 @@ href="https://github.com/Francois-Geerolf/twitter/blob/main/R/183285561044804862
 <td style="text-align: left;"><a
 href="https://github.com/Francois-Geerolf/twitter/blob/main/pdf/1832855610448048625.pdf">pdf</a></td>
 </tr>
-<tr class="odd">
+<tr>
 <td style="text-align: left;"><a
 href="https://x.com/FrancoisGeerolf/status/1826530570236469418">tweet</a></td>
 <td style="text-align: left;"><img src="png/1826530570236469418.png"
@@ -48,7 +67,7 @@ href="https://github.com/Francois-Geerolf/twitter/blob/main/R/182653057023646941
 <td style="text-align: left;"><a
 href="https://github.com/Francois-Geerolf/twitter/blob/main/pdf/1826530570236469418.pdf">pdf</a></td>
 </tr>
-<tr class="even">
+<tr>
 <td style="text-align: left;"><a
 href="https://x.com/FrancoisGeerolf/status/1816121032928874928">tweet</a></td>
 <td style="text-align: left;"><img src="png/1816121032928874928.png"
@@ -58,7 +77,7 @@ href="https://github.com/Francois-Geerolf/twitter/blob/main/R/181612103292887492
 <td style="text-align: left;"><a
 href="https://github.com/Francois-Geerolf/twitter/blob/main/pdf/1816121032928874928.pdf">pdf</a></td>
 </tr>
-<tr class="odd">
+<tr>
 <td style="text-align: left;"><a
 href="https://x.com/FrancoisGeerolf/status/1519713704857718784">tweet</a></td>
 <td style="text-align: left;"><img src="png/1519713704857718784.png"
@@ -68,7 +87,7 @@ href="https://github.com/Francois-Geerolf/twitter/blob/main/R/151971370485771878
 <td style="text-align: left;"><a
 href="https://github.com/Francois-Geerolf/twitter/blob/main/pdf/1519713704857718784.pdf">pdf</a></td>
 </tr>
-<tr class="even">
+<tr>
 <td style="text-align: left;"><a
 href="https://x.com/FrancoisGeerolf/status/1487713516127768576">tweet</a></td>
 <td style="text-align: left;"><img src="png/1487713516127768576.png"
@@ -78,11 +97,11 @@ href="https://github.com/Francois-Geerolf/twitter/blob/main/R/148771351612776857
 <td style="text-align: left;"><a
 href="https://github.com/Francois-Geerolf/twitter/blob/main/pdf/1487713516127768576.pdf">pdf</a></td>
 </tr>
-<tr class="odd">
+<tr>
 <td style="text-align: left;"><a
 href="https://x.com/FrancoisGeerolf/status/1487364702841749504">tweet</a></td>
 <td style="text-align: left;"><img src="png/1487364702841749504.png"
-alt="Exportations nettes (% du PIB)" /></td>
+alt="library(rsdmx)" /></td>
 <td style="text-align: left;"><a
 href="https://github.com/Francois-Geerolf/twitter/blob/main/R/1487364702841749504.R">R</a></td>
 <td style="text-align: left;"><a
@@ -90,11 +109,3 @@ href="https://github.com/Francois-Geerolf/twitter/blob/main/pdf/1487364702841749
 </tr>
 </tbody>
 </table>
-
-Cette table donne chaque statut de tweet n°xxx disponible via l’URL
-<https://twitter.com/FrancoisGeerolf/status/xxx> - le graphique en
-format png xxx.png. - le fichier de réplication R xxx.R. - le pdf en
-format pdf xxx.pdf.
-
-Me contacter si cela ne fonctionne pas, s’il y a une erreur, ou pour que
-j’ajoute le code d’autres graphiques.

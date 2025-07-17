@@ -4,26 +4,44 @@ author: François Geerolf
 output: md_document
 ---
 
+Codes permettant de répliquer plusieurs graphiques partagés sur le compte Twitter [@FrancoisGeerolf](https://twitter.com/FrancoisGeerolf).
 
-Codes pour répliquer quelques graphiques présentés sur le compte Twitter [@FrancoisGeerolf](https://twitter.com/FrancoisGeerolf). La liste des codes:
+Chaque ligne de la table correspond à un tweet contenant :
+- le lien vers le **tweet** original,
+- une **version mise à jour du graphique** (`.png`),
+- le **code R de réplication** (`.R`),
+- la **version PDF** du graphique (`.pdf`).
+
+N'hésitez pas à me contacter si un lien ne fonctionne pas, si vous constatez une erreur, ou si vous souhaitez que j’ajoute d’autres graphiques.
+
 
 ```{r echo = FALSE, results='asis'}
-dplyr::tibble(R = list.files(path = "R", pattern = "\\.R$")) |>
-  dplyr::arrange(desc(R)) |>
-  dplyr::mutate(n = tools::file_path_sans_ext(R),
-                Titre = readr::read_lines(paste0("R/", R), skip = 0, n_max = 1),
-                Titre = gsub("# ", "", Titre),
-                tweet = paste0("[tweet](https://x.com/FrancoisGeerolf/status/", n, ")"),
-                R = paste0("[R](https://github.com/Francois-Geerolf/twitter/blob/main/R/", n, ".R)"),
-                pdf = paste0("[pdf](https://github.com/Francois-Geerolf/twitter/blob/main/pdf/", n, ".pdf)"),
-                `Graphique (mis à jour)` = paste0("![", Titre, "](png/", n, ".png)")) |>
-  dplyr::select(tweet, `Graphique (mis à jour)`, R, pdf) |>
-  knitr::kable()
+library(dplyr)
+library(readr)
+library(tools)
+library(knitr)
+
+# Lister tous les fichiers .R dans le dossier R/
+liste_R <- list.files(path = "R", pattern = "\\.R$")
+
+# Créer la table
+table_graph <- tibble(R = liste_R) |>
+  arrange(desc(R)) |>
+  mutate(
+    n = file_path_sans_ext(R),
+    # Lire la première ligne pour récupérer un éventuel titre
+    Titre = sapply(paste0("R/", R), function(f) {
+      ligne <- tryCatch(read_lines(f, n_max = 1), error = function(e) "")
+      gsub("^#\\s*", "", ligne)
+    }),
+    tweet = paste0("[tweet](https://x.com/FrancoisGeerolf/status/", n, ")"),
+    R = paste0("[R](https://github.com/Francois-Geerolf/twitter/blob/main/R/", n, ".R)"),
+    pdf = paste0("[pdf](https://github.com/Francois-Geerolf/twitter/blob/main/pdf/", n, ".pdf)"),
+    `Graphique (mis à jour)` = paste0("![", Titre, "](png/", n, ".png)")
+  ) |>
+  select(tweet, `Graphique (mis à jour)`, R, pdf)
+
+# Affichage
+kable(table_graph)
+
 ```
-
-Cette table donne chaque statut de tweet n°xxx disponible via l'URL <https://twitter.com/FrancoisGeerolf/status/xxx>
-- le graphique en format png xxx.png.
-- le fichier de réplication R xxx.R.
-- le pdf en format pdf xxx.pdf.
-
-Me contacter si cela ne fonctionne pas, s'il y a une erreur, ou pour que j'ajoute le code d'autres graphiques.
