@@ -8,24 +8,25 @@ library(zoo)
 ## Base 2014 (original) ----
 
 idbanks <- c(
-  "010565588", "010565630", # Biens
-  "010565590", "010565632", # Biens manufacturés
-  "010565592", "010565634", # Biens industriels
-  "010565707"               # PIB total
+  biens_X = "010565588",
+  biens_M = "010565630",
+  biens_manuf_X = "010565590", 
+  biens_manuf_M = "010565632",
+  biens_indus_X = "010565592",
+  biens_indus_M = "010565634",
+  pib = "010565707"
 )
-
 ## Base 2020 (à jour) ----
 
 idbanks <- c(
   biens_X = "011795478",
-  biens_M = "011795520", # Biens
+  biens_M = "011795520",
   biens_manuf_X = "011795480", 
-  biens_manuf_M = "011795522", # Biens manufacturés
-  biens_indus_X = "011795482",  # Biens industriels
+  biens_manuf_M = "011795522",
+  biens_indus_X = "011795482",
   biens_indus_M = "011795524",
-  pib = "011794859"               # PIB total
+  pib = "011794859"
 )
-
 
 # Construction de l'URL
 url <- paste0(
@@ -57,7 +58,7 @@ ggplot(data) +
   geom_line(aes(x = TIME_PERIOD, y = OBS_VALUE, color = Cna_produit)) +
   geom_hline(yintercept = 0, linetype = "dashed") +
   scale_x_date(
-    breaks = seq(1940, 2025, by = 10) %>% paste0("-01-01") %>% as.Date(),
+    breaks = seq(1940, year(Sys.Date()), by = 10) %>% paste0("-01-01") %>% as.Date(),
     labels = date_format("%Y")
   ) +
   scale_y_continuous(
