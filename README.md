@@ -30,6 +30,16 @@ vous souhaitez que j’ajoute d’autres graphiques.
 <tbody>
 <tr>
 <td style="text-align: left;"><a
+href="https://x.com/FrancoisGeerolf/status/1945587985228980306">tweet</a></td>
+<td style="text-align: left;"><img src="png/1945587985228980306.png"
+alt="Hausse du déficit depuis 2017" /></td>
+<td style="text-align: left;"><a
+href="https://github.com/Francois-Geerolf/twitter/blob/main/R/1945587985228980306.R">R</a></td>
+<td style="text-align: left;"><a
+href="https://github.com/Francois-Geerolf/twitter/blob/main/pdf/1945587985228980306.pdf">pdf</a></td>
+</tr>
+<tr>
+<td style="text-align: left;"><a
 href="https://x.com/FrancoisGeerolf/status/1879257670223573007">tweet</a></td>
 <td style="text-align: left;"><img src="png/1879257670223573007.png"
 alt="Naissances et décès: 627 895 naissances vs. 627 894 décès, selon l’Insee !" /></td>
@@ -92,7 +102,7 @@ href="https://github.com/Francois-Geerolf/twitter/blob/main/pdf/1487713516127768
 <td style="text-align: left;"><a
 href="https://x.com/FrancoisGeerolf/status/1487364702841749504">tweet</a></td>
 <td style="text-align: left;"><img src="png/1487364702841749504.png"
-alt="library(rsdmx)" /></td>
+alt="Exportations nettes de biens, biens industriels, biens manufacturés" /></td>
 <td style="text-align: left;"><a
 href="https://github.com/Francois-Geerolf/twitter/blob/main/R/1487364702841749504.R">R</a></td>
 <td style="text-align: left;"><a
