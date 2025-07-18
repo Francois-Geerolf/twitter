@@ -1,11 +1,11 @@
-# Naissances et décès: 627 895 naissances vs. 627 894 décès en FM, selon l'Insee !
-# https://twitter.com/FrancoisGeerolf/status/1879257670223573007
+# Naissances et décès: chiffres sur la France Entière
+# https://twitter.com/FrancoisGeerolf/status/1917855106449448963
 
 source("_rinit.R")
 
 # ---- Paramètres ----
 
-idbank_codes <- c("000436394", "000436391")
+idbank_codes <- c("001641603", "001641601")
 
 # ---- Construction de l’URL ----
 
@@ -56,7 +56,7 @@ ggplot(data) +
   ) +
   labs(
     x = NULL,
-    y = "Nombre sur les 12 derniers mois\nFrance Métropolitaine",
+    y = "Nombre sur les 12 derniers mois\nFrance Entière",
     title = ""
   ) +
   theme_minimal(base_size = 13) +
