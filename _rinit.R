@@ -1,6 +1,6 @@
 # Define the package list
 packages <- c(
-  "tidyverse",
+  "ggplot2", "dplyr", "readr", "tibble", "stringr", "forcats", "purrr", "tidyr", # not tidyverse
   "rsdmx",
   "scales",
   "viridis",
