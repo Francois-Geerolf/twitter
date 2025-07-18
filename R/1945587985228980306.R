@@ -67,9 +67,15 @@ delta_data <- data %>%
     .groups = "drop"
   )
 
+# Extraire les y_max et y_min de 2017
+y_vals_2017 <- delta_data |>
+  filter(date == as.Date("2017-01-01")) |>
+  select(y_max, y_min) |>
+  unlist()
+
 
 data %>%
-  ggplot + geom_line(aes(x = date, y = value / gdp, color = Line)) +
+  ggplot + geom_line(aes(x = date, y = value / gdp, color = Line), size = 1) +
   theme_minimal() + xlab("") + ylab("% du PIB") +
   scale_x_date(breaks = seq(1960, 2100, 1) %>% paste0("-01-01") %>% as.Date,
                labels = date_format("%Y")) +
@@ -77,15 +83,21 @@ data %>%
                      labels = percent_format(accuracy = 1)) +
   
   theme(legend.position = c(0.2, 0.85),
-        legend.title = element_blank()) +
-  geom_label(data = . %>% filter(date %in% c(max(date), min(date))),
-             aes(x = date, y = value / gdp, label = percent(value/gdp, acc = 0.1), color = Line)) +
+        legend.title = element_blank(),
+        legend.text = element_text(face = "bold")) +
+  geom_label(
+    data = . %>% filter(date %in% c(max(date), min(date))),
+    aes(x = date, y = value / gdp, label = percent(value/gdp, acc = 0.1),
+        color = Line),
+    fontface = "bold"
+  ) +
   geom_segment(
     data = delta_data,
     aes(x = date, xend = date, y = y_min+0.005, yend = y_max-0.005),
     arrow = arrow(length = unit(0.2, "cm"), ends = "both"),
     color = "black"
   ) +
+  geom_hline(yintercept = y_vals_2017, linetype = "dotted", color = "grey50") +
   geom_label(
     data = delta_data,
     aes(x = date+months(6), y = (y_max + y_min) / 2,
