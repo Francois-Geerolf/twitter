@@ -32,6 +32,12 @@ jobs:
           install.packages(c("ggplot2", "dplyr", "readr", "tibble", "stringr", "forcats", "purrr", "tidyr", "rsdmx", "scales", "viridis", "zoo", "lubridate", "ggrepel", "curl"), repos = "https://cloud.r-project.org")
         shell: Rscript {0}
 
+      - name: 📦 Install rsdmx from GitHub
+        run: |
+          install.packages("remotes", repos = "https://cloud.r-project.org")
+          remotes::install_github("opensdmx/rsdmx")
+        shell: Rscript {0}
+
       - name: ▶️ Run _build.R
         run: Rscript _build.R
 
