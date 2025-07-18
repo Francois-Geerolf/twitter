@@ -29,7 +29,7 @@ jobs:
 
       - name: 📦 Install required packages
         run: |
-          install.packages(c("ggplot2", "dplyr", "readr", "tibble", "stringr", "forcats", "purrr", "tidyr", "rsdmx", "scales", "viridis", "zoo", "lubridate", "ggrepel", "curl"), repos = "https://cloud.r-project.org")
+          install.packages(c("ggplot2", "dplyr", "readr", "tibble", "stringr", "forcats", "purrr", "tidyr", "scales", "viridis", "zoo", "lubridate", "ggrepel", "curl"), repos = "https://cloud.r-project.org")
         shell: Rscript {0}
 
       - name: 📦 Install rsdmx from GitHub
