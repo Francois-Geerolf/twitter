@@ -11,10 +11,14 @@ on:
       - '**.R'
       - '**.Rmd'
       - '_build.R'
+  schedule:
+    - cron: '0 3 * * *'   # tous les jours à 03:00 UTC
 
 jobs:
   build:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
 
     steps:
       - name: 📥 Checkout repository
@@ -35,7 +39,9 @@ jobs:
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add README.md png/*.png pdf/*.pdf figures/* || true
+          git add README.md || true
+          [ -d png ] && git add png/*.png || true
+          [ -d pdf ] && git add pdf/*.pdf || true
+          [ -d figures ] && git add figures/* || true
           git commit -m "Update outputs (README, PNG, PDF) [auto]" || echo "No changes to commit"
           git push || echo "No changes to push"
-
