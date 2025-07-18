@@ -1,0 +1,41 @@
+name: Build and Commit Outputs
+
+on:
+  push:
+    paths:
+      - '**.R'
+      - '**.Rmd'
+      - '_build.R'
+  pull_request:
+    paths:
+      - '**.R'
+      - '**.Rmd'
+      - '_build.R'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 📥 Checkout repository
+        uses: actions/checkout@v4
+
+      - name: 🔧 Setup R
+        uses: r-lib/actions/setup-r@v2
+
+      - name: 📦 Install required packages
+        run: |
+          install.packages(c("rmarkdown", "ggplot2", "readr", "dplyr"), repos = "https://cloud.r-project.org")
+        shell: Rscript {0}
+
+      - name: ▶️ Run _build.R
+        run: Rscript _build.R
+
+      - name: 📤 Commit any updated output (README, png, pdf, etc.)
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add README.md png/*.png pdf/*.pdf figures/* || true
+          git commit -m "Update outputs (README, PNG, PDF) [auto]" || echo "No changes to commit"
+          git push || echo "No changes to push"
+
