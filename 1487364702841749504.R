@@ -1,11 +1,7 @@
 # Exportations nettes de biens, biens industriels, biens manufacturés
 # https://twitter.com/FrancoisGeerolf/status/1487364702841749504
 
-library(rsdmx)
-library(tidyverse)
-library(scales)
-library(viridis)
-library(zoo)
+source("_rinit.R")
 
 # Identifiants INSEE base 2020
 idbanks <- c(
@@ -55,9 +51,9 @@ ggplot(data, aes(x = TIME_PERIOD, y = OBS_VALUE, color = Cna_produit)) +
   ) +
   scale_color_viridis_d(begin = 0.2, end = 0.9, option = "D") +
   labs(
-    title = "Exportations nettes de biens en % du PIB",
-    subtitle = "Données trimestrielles",
-    caption = "Source : Insee (comptes trimestriels), @FrancoisGeerolf",
+    #title = "Exportations nettes de biens en % du PIB",
+    #subtitle = "Données trimestrielles",
+    #caption = "Source : Insee (comptes trimestriels), @FrancoisGeerolf",
     x = NULL, y = NULL, color = NULL
   ) +
   theme_minimal(base_size = 13) +

@@ -1,12 +1,7 @@
 # Hausse du déficit depuis 2017
 # https://twitter.com/FrancoisGeerolf/status/1945587985228980306
 
-library(tidyverse)
-library(scales)
-library(rsdmx)
-library(zoo)
-library(ggrepel)
-library(curl)
+source("_rinit.R")
 
 # ---- Paramètres ----
 

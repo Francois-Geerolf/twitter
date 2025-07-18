@@ -1,10 +1,7 @@
 # Inflation des loyers
 # https://twitter.com/FrancoisGeerolf/status/1519713704857718784
-library(rsdmx)
-library(tidyverse)
-library(scales)
-library(zoo)
-library(lubridate)
+
+source("_rinit.R")
 
 # ---- Paramètres ----
 

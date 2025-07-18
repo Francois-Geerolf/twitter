@@ -1,8 +1,7 @@
 # Inflation Juillet 2021-2024: IPCH, énergie, alimentation
 # https://twitter.com/FrancoisGeerolf/status/1832855610448048625
-library(tidyverse)
-library(scales)
-library(rsdmx)
+
+source("_rinit.R")
 
 # ---- Paramètres ----
 

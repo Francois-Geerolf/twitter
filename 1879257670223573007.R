@@ -1,10 +1,7 @@
 # Naissances et décès: 627 895 naissances vs. 627 894 décès, selon l'Insee !
 # https://twitter.com/FrancoisGeerolf/status/1879257670223573007
-library(tidyverse)
-library(scales)
-library(rsdmx)
-library(zoo)
-library(ggrepel)
+
+source("_rinit.R")
 
 # ---- Paramètres ----
 

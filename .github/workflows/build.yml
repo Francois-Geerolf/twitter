@@ -29,7 +29,7 @@ jobs:
 
       - name: 📦 Install required packages
         run: |
-          install.packages(c("rmarkdown", "ggplot2", "readr", "dplyr"), repos = "https://cloud.r-project.org")
+          install.packages(c("tidyverse", "rsdmx", "scales", "viridis", "zoo", "lubridate", "ggrepel", "curl"), repos = "https://cloud.r-project.org")
         shell: Rscript {0}
 
       - name: ▶️ Run _build.R

@@ -40,6 +40,16 @@ href="https://github.com/Francois-Geerolf/twitter/blob/main/pdf/_run.pdf">pdf</a
 </tr>
 <tr>
 <td style="text-align: left;"><a
+href="https://x.com/FrancoisGeerolf/status/_rinit">tweet</a></td>
+<td style="text-align: left;"><strong>Define the package
+list</strong><br><img src="png/_rinit.png" /></td>
+<td style="text-align: left;"><a
+href="https://github.com/Francois-Geerolf/twitter/blob/main/_rinit.R">R</a></td>
+<td style="text-align: left;"><a
+href="https://github.com/Francois-Geerolf/twitter/blob/main/pdf/_rinit.pdf">pdf</a></td>
+</tr>
+<tr>
+<td style="text-align: left;"><a
 href="https://x.com/FrancoisGeerolf/status/1945587985228980306">tweet</a></td>
 <td style="text-align: left;"><strong>Hausse du déficit depuis
 2017</strong><br><img src="png/1945587985228980306.png" /></td>

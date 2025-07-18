@@ -1,12 +1,7 @@
 # Indice de production industrielle vs. Mai 2017
 # https://twitter.com/FrancoisGeerolf/status/1816121032928874928
 
-library(tidyverse)
-library(ggrepel)
-library(viridis)
-library(rsdmx)
-library(lubridate)
-library(scales)
+source("_rinit.R")
 
 # ---- Paramètres ----
 

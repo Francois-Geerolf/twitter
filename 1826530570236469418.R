@@ -1,9 +1,7 @@
 # Hausse des prix dans la grande distribution (Octobre 2021 -)
 # https://twitter.com/FrancoisGeerolf/status/1826530570236469418
-library(tidyverse)
-library(rsdmx)
-library(scales)
-library(lubridate)
+
+source("_rinit.R")
 
 # ---- Paramètres ----
 

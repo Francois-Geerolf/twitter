@@ -1,9 +1,7 @@
 # Emploi Trimestriel (2016T1-)
 # https://twitter.com/FrancoisGeerolf/status/1487713516127768576
-library(rsdmx)
-library(tidyverse)
-library(scales)
-library(zoo)
+
+source("_rinit.R")
 
 # ---- Paramètres ----
 
