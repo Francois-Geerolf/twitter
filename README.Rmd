@@ -30,19 +30,18 @@ table_graph <- tibble(R = liste_R) |>
   arrange(desc(R)) |>
   mutate(
     n = file_path_sans_ext(R),
-    # Lire la première ligne pour récupérer un éventuel titre
-    Titre = sapply(paste0("R/", R), function(f) {
+    Titre = sapply(file.path("R", R), function(f) {
       ligne <- tryCatch(read_lines(f, n_max = 1), error = function(e) "")
       gsub("^#\\s*", "", ligne)
     }),
     tweet = paste0("[tweet](https://x.com/FrancoisGeerolf/status/", n, ")"),
     R = paste0("[R](https://github.com/Francois-Geerolf/twitter/blob/main/R/", n, ".R)"),
     pdf = paste0("[pdf](https://github.com/Francois-Geerolf/twitter/blob/main/pdf/", n, ".pdf)"),
-    `Graphique (mis à jour)` = paste0("![", Titre, "](png/", n, ".png)")
+    `Graphique (mis à jour)` = paste0("**", Titre, "**<br>![](png/", n, ".png)")
   ) |>
   select(tweet, `Graphique (mis à jour)`, R, pdf)
 
 # Affichage
-kable(table_graph)
+kable(table_graph, escape = FALSE)
 
 ```
