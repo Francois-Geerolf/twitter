@@ -1,3 +1,6 @@
+
+source("_rinit.R")
+
 # Définir les dimensions des graphiques
 plot_height <- 1.25 * 3.375
 plot_width  <- 1.25 * 6
@@ -7,7 +10,10 @@ dir.create("png", showWarnings = FALSE)
 dir.create("pdf", showWarnings = FALSE)
 
 # Lister les fichiers .R dans le dossier "R"
-r_files <- list.files(pattern = "\\.R$", full.names = TRUE)[c(-1, -2, -3)]
+r_files <- list.files(pattern = "\\.R$", full.names = FALSE) |>
+  as_tibble() |>
+  filter(!startsWith(value, "_")) |>
+  pull(value)
 
 # Boucle sur chaque fichier
 for (file_path in r_files) {
