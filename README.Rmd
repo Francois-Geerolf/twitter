@@ -19,9 +19,7 @@ Vous pouvez me contacter si un lien ne fonctionne pas, si vous constatez une err
 ```{r echo = FALSE, results='asis', message = F, warning = F}
 source("_rinit.R")
 
-
-
-# Lister tous les fichiers .R dans le dossier R/ sauf ceux qui commencent par _
+# Lister tous les fichiers .R sauf ceux qui commencent par _
 liste_R <- list.files(pattern = "\\.R$", full.names = FALSE) |>
   as_tibble() |>
   filter(!startsWith(value, "_")) |>
