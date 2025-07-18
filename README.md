@@ -30,11 +30,21 @@ vous souhaitez que j’ajoute d’autres graphiques.
 <tbody>
 <tr>
 <td style="text-align: left;"><a
+href="https://x.com/FrancoisGeerolf/status/_run">tweet</a></td>
+<td style="text-align: left;"><strong>Définir les dimensions des
+graphiques</strong><br><img src="png/_run.png" /></td>
+<td style="text-align: left;"><a
+href="https://github.com/Francois-Geerolf/twitter/blob/main/_run.R">R</a></td>
+<td style="text-align: left;"><a
+href="https://github.com/Francois-Geerolf/twitter/blob/main/pdf/_run.pdf">pdf</a></td>
+</tr>
+<tr>
+<td style="text-align: left;"><a
 href="https://x.com/FrancoisGeerolf/status/1945587985228980306">tweet</a></td>
 <td style="text-align: left;"><strong>Hausse du déficit depuis
 2017</strong><br><img src="png/1945587985228980306.png" /></td>
 <td style="text-align: left;"><a
-href="https://github.com/Francois-Geerolf/twitter/blob/main/R/1945587985228980306.R">R</a></td>
+href="https://github.com/Francois-Geerolf/twitter/blob/main/1945587985228980306.R">R</a></td>
 <td style="text-align: left;"><a
 href="https://github.com/Francois-Geerolf/twitter/blob/main/pdf/1945587985228980306.pdf">pdf</a></td>
 </tr>
@@ -45,7 +55,7 @@ href="https://x.com/FrancoisGeerolf/status/1879257670223573007">tweet</a></td>
 naissances vs. 627 894 décès, selon l’Insee !</strong><br><img
 src="png/1879257670223573007.png" /></td>
 <td style="text-align: left;"><a
-href="https://github.com/Francois-Geerolf/twitter/blob/main/R/1879257670223573007.R">R</a></td>
+href="https://github.com/Francois-Geerolf/twitter/blob/main/1879257670223573007.R">R</a></td>
 <td style="text-align: left;"><a
 href="https://github.com/Francois-Geerolf/twitter/blob/main/pdf/1879257670223573007.pdf">pdf</a></td>
 </tr>
@@ -56,7 +66,7 @@ href="https://x.com/FrancoisGeerolf/status/1832855610448048625">tweet</a></td>
 énergie, alimentation</strong><br><img
 src="png/1832855610448048625.png" /></td>
 <td style="text-align: left;"><a
-href="https://github.com/Francois-Geerolf/twitter/blob/main/R/1832855610448048625.R">R</a></td>
+href="https://github.com/Francois-Geerolf/twitter/blob/main/1832855610448048625.R">R</a></td>
 <td style="text-align: left;"><a
 href="https://github.com/Francois-Geerolf/twitter/blob/main/pdf/1832855610448048625.pdf">pdf</a></td>
 </tr>
@@ -67,7 +77,7 @@ href="https://x.com/FrancoisGeerolf/status/1826530570236469418">tweet</a></td>
 distribution (Octobre 2021 -)</strong><br><img
 src="png/1826530570236469418.png" /></td>
 <td style="text-align: left;"><a
-href="https://github.com/Francois-Geerolf/twitter/blob/main/R/1826530570236469418.R">R</a></td>
+href="https://github.com/Francois-Geerolf/twitter/blob/main/1826530570236469418.R">R</a></td>
 <td style="text-align: left;"><a
 href="https://github.com/Francois-Geerolf/twitter/blob/main/pdf/1826530570236469418.pdf">pdf</a></td>
 </tr>
@@ -77,7 +87,7 @@ href="https://x.com/FrancoisGeerolf/status/1816121032928874928">tweet</a></td>
 <td style="text-align: left;"><strong>Indice de production industrielle
 vs. Mai 2017</strong><br><img src="png/1816121032928874928.png" /></td>
 <td style="text-align: left;"><a
-href="https://github.com/Francois-Geerolf/twitter/blob/main/R/1816121032928874928.R">R</a></td>
+href="https://github.com/Francois-Geerolf/twitter/blob/main/1816121032928874928.R">R</a></td>
 <td style="text-align: left;"><a
 href="https://github.com/Francois-Geerolf/twitter/blob/main/pdf/1816121032928874928.pdf">pdf</a></td>
 </tr>
@@ -87,7 +97,7 @@ href="https://x.com/FrancoisGeerolf/status/1519713704857718784">tweet</a></td>
 <td style="text-align: left;"><strong>Inflation des
 loyers</strong><br><img src="png/1519713704857718784.png" /></td>
 <td style="text-align: left;"><a
-href="https://github.com/Francois-Geerolf/twitter/blob/main/R/1519713704857718784.R">R</a></td>
+href="https://github.com/Francois-Geerolf/twitter/blob/main/1519713704857718784.R">R</a></td>
 <td style="text-align: left;"><a
 href="https://github.com/Francois-Geerolf/twitter/blob/main/pdf/1519713704857718784.pdf">pdf</a></td>
 </tr>
@@ -97,7 +107,7 @@ href="https://x.com/FrancoisGeerolf/status/1487713516127768576">tweet</a></td>
 <td style="text-align: left;"><strong>Emploi Trimestriel
 (2016T1-)</strong><br><img src="png/1487713516127768576.png" /></td>
 <td style="text-align: left;"><a
-href="https://github.com/Francois-Geerolf/twitter/blob/main/R/1487713516127768576.R">R</a></td>
+href="https://github.com/Francois-Geerolf/twitter/blob/main/1487713516127768576.R">R</a></td>
 <td style="text-align: left;"><a
 href="https://github.com/Francois-Geerolf/twitter/blob/main/pdf/1487713516127768576.pdf">pdf</a></td>
 </tr>
@@ -108,7 +118,7 @@ href="https://x.com/FrancoisGeerolf/status/1487364702841749504">tweet</a></td>
 biens industriels, biens manufacturés</strong><br><img
 src="png/1487364702841749504.png" /></td>
 <td style="text-align: left;"><a
-href="https://github.com/Francois-Geerolf/twitter/blob/main/R/1487364702841749504.R">R</a></td>
+href="https://github.com/Francois-Geerolf/twitter/blob/main/1487364702841749504.R">R</a></td>
 <td style="text-align: left;"><a
 href="https://github.com/Francois-Geerolf/twitter/blob/main/pdf/1487364702841749504.pdf">pdf</a></td>
 </tr>
