@@ -15,9 +15,9 @@ vous souhaitez que j’ajoute d’autres graphiques.
 <table>
 <colgroup>
 <col style="width: 4%" />
-<col style="width: 89%" />
+<col style="width: 90%" />
 <col style="width: 2%" />
-<col style="width: 3%" />
+<col style="width: 2%" />
 </colgroup>
 <thead>
 <tr>
@@ -60,9 +60,20 @@ href="https://github.com/Francois-Geerolf/twitter/blob/main/pdf/1945587985228980
 </tr>
 <tr>
 <td style="text-align: left;"><a
+href="https://x.com/FrancoisGeerolf/status/1917855106449448963">tweet</a></td>
+<td style="text-align: left;"><strong>Naissances et décès: chiffres sur
+la France Entière</strong><br><img
+src="png/1917855106449448963.png" /></td>
+<td style="text-align: left;"><a
+href="https://github.com/Francois-Geerolf/twitter/blob/main/1917855106449448963.R">R</a></td>
+<td style="text-align: left;"><a
+href="https://github.com/Francois-Geerolf/twitter/blob/main/pdf/1917855106449448963.pdf">pdf</a></td>
+</tr>
+<tr>
+<td style="text-align: left;"><a
 href="https://x.com/FrancoisGeerolf/status/1879257670223573007">tweet</a></td>
 <td style="text-align: left;"><strong>Naissances et décès: 627 895
-naissances vs. 627 894 décès, selon l’Insee !</strong><br><img
+naissances vs. 627 894 décès en FM, selon l’Insee !</strong><br><img
 src="png/1879257670223573007.png" /></td>
 <td style="text-align: left;"><a
 href="https://github.com/Francois-Geerolf/twitter/blob/main/1879257670223573007.R">R</a></td>
