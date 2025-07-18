@@ -14,30 +14,18 @@ idbank_codes <- c("011779992")
 version <- "8574705"
 filename <- "T_3201.xlsx"
 
-url2 <- paste(
-  "https://www.insee.fr/fr/statistiques/fichier",
-  version,
-  filename,
-  sep = "/"
-)
-
-
-file <- tempfile()
-curl_download(url2, destfile = file, quiet = F)
-
-T_3201 <- readxl::read_excel(file, skip = 1) %>%
-  rename(Line = ...1) %>%
-  filter(!is.na(`2019`)) %>%
-  mutate(line = 1:n()) %>%
-  gather(year, value, -Line, -line) %>%
-  mutate(value = as.numeric(value)) %>%
-  filter(!is.na(value))
-
 # ---- Construction de l’URL ----
 
 url <- paste0(
   "https://www.bdm.insee.fr/series/sdmx/data/SERIES_BDM/",
   paste(idbank_codes, collapse = "+")
+)
+
+url2 <- paste(
+  "https://www.insee.fr/fr/statistiques/fichier",
+  version,
+  filename,
+  sep = "/"
 )
 
 # ---- Import et traitement des données ----
@@ -46,20 +34,31 @@ gdp <- url |>
   readSDMX() |>
   as_tibble() |>
   transmute(date = as.Date(paste0(TIME_PERIOD, "-01-01")),
-            gdp = (OBS_VALUE %>% as.numeric)/1000) |>
+            gdp = (OBS_VALUE |> as.numeric())/1000) |>
   arrange(date)
 
 # ---- Import et traitement des données ----
 
-data <- T_3201 %>%
-  filter(line %in% c(44, 19)) %>%
-  mutate(date = as.Date(paste0(year, "-01-01"))) %>%
-  left_join(gdp, by = "date") %>%
+file <- tempfile()
+curl_download(url2, destfile = file, quiet = F)
+
+T_3201 <- readxl::read_excel(file, skip = 1) |>
+  rename(Line = ...1) |>
+  filter(!is.na(`2019`)) |>
+  mutate(line = 1:n()) |>
+  gather(year, value, -Line, -line) |>
+  mutate(value = as.numeric(value)) |>
+  filter(!is.na(value))
+
+data <- T_3201 |>
+  filter(line %in% c(44, 19)) |>
+  mutate(date = as.Date(paste0(year, "-01-01"))) |>
+  left_join(gdp, by = "date") |>
   filter(date >= as.Date("2017-01-01"))
 
-delta_data <- data %>%
-  filter(format(date, "%Y") %in% c("2017", "2024")) %>%
-  group_by(date) %>%
+delta_data <- data |>
+  filter(format(date, "%Y") %in% c("2017", "2024")) |>
+  group_by(date) |>
   summarise(
     y_max = max(value / gdp),
     y_min = min(value / gdp),
@@ -67,17 +66,16 @@ delta_data <- data %>%
     .groups = "drop"
   )
 
-# Extraire les y_max et y_min de 2017
+# ---- Extraire les y_max et y_min de 2017  ----
 y_vals_2017 <- delta_data |>
   filter(date == as.Date("2017-01-01")) |>
   select(y_max, y_min) |>
   unlist()
 
 
-data %>%
-  ggplot + geom_line(aes(x = date, y = value / gdp, color = Line), size = 1) +
+ggplot(data = data) + geom_line(aes(x = date, y = value / gdp, color = Line), size = 1) +
   theme_minimal() + xlab("") + ylab("% du PIB") +
-  scale_x_date(breaks = seq(1960, 2100, 1) %>% paste0("-01-01") %>% as.Date,
+  scale_x_date(breaks = seq(1960, 2100, 1) |> paste0("-01-01") |> as.Date(),
                labels = date_format("%Y")) +
   scale_y_continuous(breaks = 0.01*seq(0, 500, 1),
                      labels = percent_format(accuracy = 1)) +
@@ -86,7 +84,7 @@ data %>%
         legend.title = element_blank(),
         legend.text = element_text(face = "bold")) +
   geom_label(
-    data = . %>% filter(date %in% c(max(date), min(date))),
+    data = data |> filter(date %in% c(max(date), min(date))),
     aes(x = date, y = value / gdp, label = percent(value/gdp, acc = 0.1),
         color = Line),
     fontface = "bold"

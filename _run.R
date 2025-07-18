@@ -7,7 +7,7 @@ dir.create("png", showWarnings = FALSE)
 dir.create("pdf", showWarnings = FALSE)
 
 # Lister les fichiers .R dans le dossier "R"
-r_files <- list.files("R", pattern = "\\.R$", full.names = TRUE)
+r_files <- list.files(pattern = "\\.R$", full.names = TRUE)[-1]
 
 # Boucle sur chaque fichier
 for (file_path in r_files) {

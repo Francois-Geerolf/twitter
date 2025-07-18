@@ -23,19 +23,19 @@ library(tools)
 library(knitr)
 
 # Lister tous les fichiers .R dans le dossier R/
-liste_R <- list.files(path = "R", pattern = "\\.R$")
+liste_R <- list.files(pattern = "\\.R$")[-1]
 
 # Créer la table
 table_graph <- tibble(R = liste_R) |>
   arrange(desc(R)) |>
   mutate(
     n = file_path_sans_ext(R),
-    Titre = sapply(file.path("R", R), function(f) {
+    Titre = sapply(R, function(f) {
       ligne <- tryCatch(read_lines(f, n_max = 1), error = function(e) "")
       gsub("^#\\s*", "", ligne)
     }),
     tweet = paste0("[tweet](https://x.com/FrancoisGeerolf/status/", n, ")"),
-    R = paste0("[R](https://github.com/Francois-Geerolf/twitter/blob/main/R/", n, ".R)"),
+    R = paste0("[R](https://github.com/Francois-Geerolf/twitter/blob/main/", n, ".R)"),
     pdf = paste0("[pdf](https://github.com/Francois-Geerolf/twitter/blob/main/pdf/", n, ".pdf)"),
     `Graphique (mis à jour)` = paste0("**", Titre, "**<br>![](png/", n, ".png)")
   ) |>
@@ -43,5 +43,4 @@ table_graph <- tibble(R = liste_R) |>
 
 # Affichage
 kable(table_graph, escape = FALSE)
-
 ```
