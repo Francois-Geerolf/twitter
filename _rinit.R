@@ -9,7 +9,8 @@ packages <- c(
   "zoo",
   "lubridate",
   "ggrepel",
-  "curl"
+  "curl",
+  "readxl"
 )
 
 # # Install any missing packages

@@ -37,7 +37,7 @@ gdp <- url |>
 file <- tempfile()
 curl_download(url2, destfile = file, quiet = F)
 
-T_3201 <- readxl::read_excel(file, skip = 1) |>
+T_3201 <- read_excel(file, skip = 1) |>
   rename(Line = ...1) |>
   filter(!is.na(`2019`)) |>
   mutate(line = 1:n()) |>
