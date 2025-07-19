@@ -17,6 +17,7 @@ r_files <- list.files(pattern = "\\.R$", full.names = FALSE) |>
 
 # Boucle sur chaque fichier
 for (file_path in r_files) {
+  
   # Extraire le nom de fichier sans extension ni chemin
   file_name <- tools::file_path_sans_ext(basename(file_path))
   
