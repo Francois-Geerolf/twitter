@@ -5,13 +5,13 @@ source("_rinit.R")
 
 # ---- Paramètres ----
 
-base_year <- "2016-01-01"
+base_year <- "2017-01-01"
 idbank_codes <- c("001791539", "001791541", "010599703", "010600319")
 
 # ---- Construction de l’URL ----
 
 url <- glue::glue(
-  "https://www.bdm.insee.fr/series/sdmx/data/SERIES_BDM/{paste(idbank_codes, collapse = '+')}?startPeriod=2016"
+  "https://www.bdm.insee.fr/series/sdmx/data/SERIES_BDM/{paste(idbank_codes, collapse = '+')}?startPeriod={year(base_year)}"
 )
 
 # ---- Chargement et traitement des données ----
@@ -28,7 +28,8 @@ data <- url |>
     OBS_VALUE = 100 * OBS_VALUE / OBS_VALUE[TIME_PERIOD == as.Date(base_year)],
     TITLE_FR = TITLE_FR |>
       str_remove("^Emploi salarié en fin de trimestre - ") |>
-      str_remove(" - France métropolitaine$")
+      str_remove(" - France métropolitaine$") |>
+      str_remove(" \\([^\\)]+\\)$") # Enlever ce qui est derrière la parenthèse
   ) |>
   ungroup()
 
@@ -42,15 +43,17 @@ ggplot(data) +
     labels = date_format("%Y")
   ) +
   scale_y_log10(
-    breaks = seq(100,200, by = 2)
+    breaks = seq(100, 200, by = 2)
   ) +
   labs(
     x = NULL,
-    y = "Emploi salarié en fin de trimestre\nFrance métropolitaine (100 = 2016-T1)"
+    y = glue::glue(
+      "Emploi salarié en fin de trimestre\nFrance métropolitaine (100 = {year(base_year)}-T1)"
+    )
   ) +
   theme_minimal(base_size = 13) +
   theme(
-    legend.position = c(0.45, 0.9),
+    legend.position = c(0.4, 0.85),
     legend.title = element_blank(),
     axis.text.x = element_text(angle = 45, hjust = 1)
   )
