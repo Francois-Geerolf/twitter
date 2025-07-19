@@ -12,7 +12,6 @@ packages <- c(
   "curl"
 )
 
-# 
 # # Install any missing packages
 # installed <- packages %in% rownames(installed.packages())
 # if (any(!installed)) {
