@@ -12,11 +12,12 @@ packages <- c(
   "curl"
 )
 
-# Install any missing packages
-installed <- packages %in% rownames(installed.packages())
-if (any(!installed)) {
-  install.packages(packages[!installed], dependencies = TRUE)
-}
+# 
+# # Install any missing packages
+# installed <- packages %in% rownames(installed.packages())
+# if (any(!installed)) {
+#   install.packages(packages[!installed], dependencies = TRUE)
+# }
 
 # Load all packages
 invisible(lapply(packages, library, character.only = TRUE))
