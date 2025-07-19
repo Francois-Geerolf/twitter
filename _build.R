@@ -9,5 +9,5 @@ if (file.exists("_run.R")) {
 # Compiler le fichier README.Rmd vers README.md
 if (file.exists("README.Rmd")) {
   message("📄 Compilation de README.Rmd")
-  rmarkdown::render("README.Rmd", output_format = "md_document", output_file = "README.md")
+  render("README.Rmd", output_format = "md_document", output_file = "README.md")
 }

@@ -10,7 +10,8 @@ packages <- c(
   "lubridate",
   "ggrepel",
   "curl",
-  "readxl"
+  "readxl",
+  "rmarkdown"
 )
 
 # # Install any missing packages
