@@ -20,7 +20,7 @@ vous souhaitez que j’ajoute d’autres graphiques.
 <col style="width: 2%" />
 </colgroup>
 <thead>
-<tr>
+<tr class="header">
 <th style="text-align: left;">tweet</th>
 <th style="text-align: left;">Graphique (mis à jour)</th>
 <th style="text-align: left;">R</th>
@@ -28,7 +28,7 @@ vous souhaitez que j’ajoute d’autres graphiques.
 </tr>
 </thead>
 <tbody>
-<tr>
+<tr class="odd">
 <td style="text-align: left;"><a
 href="https://x.com/FrancoisGeerolf/status/1945587985228980306">tweet</a></td>
 <td style="text-align: left;"><strong>Hausse du déficit depuis
@@ -38,7 +38,7 @@ href="https://github.com/Francois-Geerolf/twitter/blob/main/1945587985228980306.
 <td style="text-align: left;"><a
 href="https://github.com/Francois-Geerolf/twitter/blob/main/pdf/1945587985228980306.pdf">pdf</a></td>
 </tr>
-<tr>
+<tr class="even">
 <td style="text-align: left;"><a
 href="https://x.com/FrancoisGeerolf/status/1917855106449448963">tweet</a></td>
 <td style="text-align: left;"><strong>Naissances et décès: chiffres sur
@@ -49,7 +49,7 @@ href="https://github.com/Francois-Geerolf/twitter/blob/main/1917855106449448963.
 <td style="text-align: left;"><a
 href="https://github.com/Francois-Geerolf/twitter/blob/main/pdf/1917855106449448963.pdf">pdf</a></td>
 </tr>
-<tr>
+<tr class="odd">
 <td style="text-align: left;"><a
 href="https://x.com/FrancoisGeerolf/status/1879257670223573007">tweet</a></td>
 <td style="text-align: left;"><strong>Naissances et décès: 627 895
@@ -60,7 +60,7 @@ href="https://github.com/Francois-Geerolf/twitter/blob/main/1879257670223573007.
 <td style="text-align: left;"><a
 href="https://github.com/Francois-Geerolf/twitter/blob/main/pdf/1879257670223573007.pdf">pdf</a></td>
 </tr>
-<tr>
+<tr class="even">
 <td style="text-align: left;"><a
 href="https://x.com/FrancoisGeerolf/status/1832855610448048625">tweet</a></td>
 <td style="text-align: left;"><strong>Inflation Juillet 2021-2024: IPCH,
@@ -71,7 +71,7 @@ href="https://github.com/Francois-Geerolf/twitter/blob/main/1832855610448048625.
 <td style="text-align: left;"><a
 href="https://github.com/Francois-Geerolf/twitter/blob/main/pdf/1832855610448048625.pdf">pdf</a></td>
 </tr>
-<tr>
+<tr class="odd">
 <td style="text-align: left;"><a
 href="https://x.com/FrancoisGeerolf/status/1826530570236469418">tweet</a></td>
 <td style="text-align: left;"><strong>Hausse des prix dans la grande
@@ -82,7 +82,7 @@ href="https://github.com/Francois-Geerolf/twitter/blob/main/1826530570236469418.
 <td style="text-align: left;"><a
 href="https://github.com/Francois-Geerolf/twitter/blob/main/pdf/1826530570236469418.pdf">pdf</a></td>
 </tr>
-<tr>
+<tr class="even">
 <td style="text-align: left;"><a
 href="https://x.com/FrancoisGeerolf/status/1816121032928874928">tweet</a></td>
 <td style="text-align: left;"><strong>Indice de production industrielle
@@ -92,7 +92,7 @@ href="https://github.com/Francois-Geerolf/twitter/blob/main/1816121032928874928.
 <td style="text-align: left;"><a
 href="https://github.com/Francois-Geerolf/twitter/blob/main/pdf/1816121032928874928.pdf">pdf</a></td>
 </tr>
-<tr>
+<tr class="odd">
 <td style="text-align: left;"><a
 href="https://x.com/FrancoisGeerolf/status/1519713704857718784">tweet</a></td>
 <td style="text-align: left;"><strong>Inflation des
@@ -102,7 +102,7 @@ href="https://github.com/Francois-Geerolf/twitter/blob/main/1519713704857718784.
 <td style="text-align: left;"><a
 href="https://github.com/Francois-Geerolf/twitter/blob/main/pdf/1519713704857718784.pdf">pdf</a></td>
 </tr>
-<tr>
+<tr class="even">
 <td style="text-align: left;"><a
 href="https://x.com/FrancoisGeerolf/status/1487713516127768576">tweet</a></td>
 <td style="text-align: left;"><strong>Emploi Trimestriel
@@ -112,7 +112,7 @@ href="https://github.com/Francois-Geerolf/twitter/blob/main/1487713516127768576.
 <td style="text-align: left;"><a
 href="https://github.com/Francois-Geerolf/twitter/blob/main/pdf/1487713516127768576.pdf">pdf</a></td>
 </tr>
-<tr>
+<tr class="odd">
 <td style="text-align: left;"><a
 href="https://x.com/FrancoisGeerolf/status/1487364702841749504">tweet</a></td>
 <td style="text-align: left;"><strong>Exportations nettes de biens,
