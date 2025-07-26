@@ -30,7 +30,8 @@ data <- url |>
     OBS_VALUE = rollsum(OBS_VALUE, k = 12, align = "right", fill = NA)
   ) |>
   ungroup() |>
-  arrange(desc(date))
+  arrange(desc(date)) |>
+  select(date, OBS_VALUE, TITLE_FR, DEMOGRAPHIE2)
 
 # ---- Graphique ----
 
@@ -41,7 +42,7 @@ ggplot(data) +
     aes(x = date, y = OBS_VALUE, label = DEMOGRAPHIE2, color = TITLE_FR),
     size = 3, show.legend = FALSE
   ) +
-  geom_text_repel(
+  geom_label_repel(
     data = data |> filter(date == max(date, na.rm = TRUE)),
     aes(x = date, y = OBS_VALUE, label = format(round(OBS_VALUE), big.mark = " "), color = TITLE_FR),
     size = 3, show.legend = FALSE

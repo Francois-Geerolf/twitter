@@ -36,7 +36,8 @@ data <- url |>
   mutate(
     OBS_VALUE = 100 * OBS_VALUE / OBS_VALUE[1]
   ) |>
-  ungroup()
+  ungroup() |>
+  select(date, OBS_VALUE, Coicop2016)
 
 # ---- Graphique ----
 

@@ -31,7 +31,8 @@ data <- url |>
       str_remove(" - France métropolitaine$") |>
       str_remove(" \\([^\\)]+\\)$") # Enlever ce qui est derrière la parenthèse
   ) |>
-  ungroup()
+  ungroup() |>
+  select(TIME_PERIOD, OBS_VALUE, TITLE_FR)
 
 # ---- Construction du graphique ----
 

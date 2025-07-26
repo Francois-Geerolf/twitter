@@ -32,7 +32,8 @@ data <- url |>
   filter(date >= base_date) |>
   group_by(Naf2) |>
   mutate(OBS_VALUE = 100 * OBS_VALUE / OBS_VALUE[date == base_date]) |>
-  ungroup()
+  ungroup() |>
+  select(date, OBS_VALUE, Naf2)
 
 # ---- Zone COVID (shading) ----
 
