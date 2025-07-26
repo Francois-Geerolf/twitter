@@ -13,15 +13,12 @@ une erreur, si les graphiques ne sont pas suffisamment à jour, ou si
 vous souhaitez que j’ajoute d’autres graphiques.
 
 <table>
-<<<<<<< HEAD
 <colgroup>
 <col style="width: 11%" />
 <col style="width: 75%" />
 <col style="width: 5%" />
 <col style="width: 7%" />
 </colgroup>
-=======
->>>>>>> 72ee258a44ff358e093ec6c8527755e059e8ccc4
 <thead>
 <tr>
 <th style="text-align: left;">tweet</th>
@@ -31,7 +28,6 @@ vous souhaitez que j’ajoute d’autres graphiques.
 </tr>
 </thead>
 <tbody>
-<<<<<<< HEAD
 <tr>
 <td style="text-align: left;"><a
 href="https://x.com/FrancoisGeerolf/status/1945587985228980306">tweet</a></td>
@@ -122,7 +118,5 @@ href="https://github.com/Francois-Geerolf/twitter/blob/main/R/148736470284174950
 <td style="text-align: left;"><a
 href="https://github.com/Francois-Geerolf/twitter/blob/main/pdf/1487364702841749504.pdf">pdf</a></td>
 </tr>
-=======
->>>>>>> 72ee258a44ff358e093ec6c8527755e059e8ccc4
 </tbody>
 </table>
