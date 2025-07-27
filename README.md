@@ -20,7 +20,7 @@ vous souhaitez que j’ajoute d’autres graphiques.
 <col style="width: 7%" />
 </colgroup>
 <thead>
-<tr>
+<tr class="header">
 <th style="text-align: left;">tweet</th>
 <th style="text-align: left;">Graphique (mis à jour)</th>
 <th style="text-align: left;">R</th>
@@ -28,7 +28,7 @@ vous souhaitez que j’ajoute d’autres graphiques.
 </tr>
 </thead>
 <tbody>
-<tr>
+<tr class="odd">
 <td style="text-align: left;"><a
 href="https://x.com/FrancoisGeerolf/status/1945587985228980306">tweet</a></td>
 <td style="text-align: left;">****<br><img
@@ -38,7 +38,7 @@ href="https://github.com/Francois-Geerolf/twitter/blob/main/R/194558798522898030
 <td style="text-align: left;"><a
 href="https://github.com/Francois-Geerolf/twitter/blob/main/pdf/1945587985228980306.pdf">pdf</a></td>
 </tr>
-<tr>
+<tr class="even">
 <td style="text-align: left;"><a
 href="https://x.com/FrancoisGeerolf/status/1917855106449448963">tweet</a></td>
 <td style="text-align: left;">****<br><img
@@ -48,7 +48,7 @@ href="https://github.com/Francois-Geerolf/twitter/blob/main/R/191785510644944896
 <td style="text-align: left;"><a
 href="https://github.com/Francois-Geerolf/twitter/blob/main/pdf/1917855106449448963.pdf">pdf</a></td>
 </tr>
-<tr>
+<tr class="odd">
 <td style="text-align: left;"><a
 href="https://x.com/FrancoisGeerolf/status/1879257670223573007">tweet</a></td>
 <td style="text-align: left;">****<br><img
@@ -58,7 +58,7 @@ href="https://github.com/Francois-Geerolf/twitter/blob/main/R/187925767022357300
 <td style="text-align: left;"><a
 href="https://github.com/Francois-Geerolf/twitter/blob/main/pdf/1879257670223573007.pdf">pdf</a></td>
 </tr>
-<tr>
+<tr class="even">
 <td style="text-align: left;"><a
 href="https://x.com/FrancoisGeerolf/status/1832855610448048625">tweet</a></td>
 <td style="text-align: left;">****<br><img
@@ -68,7 +68,7 @@ href="https://github.com/Francois-Geerolf/twitter/blob/main/R/183285561044804862
 <td style="text-align: left;"><a
 href="https://github.com/Francois-Geerolf/twitter/blob/main/pdf/1832855610448048625.pdf">pdf</a></td>
 </tr>
-<tr>
+<tr class="odd">
 <td style="text-align: left;"><a
 href="https://x.com/FrancoisGeerolf/status/1826530570236469418">tweet</a></td>
 <td style="text-align: left;">****<br><img
@@ -78,7 +78,7 @@ href="https://github.com/Francois-Geerolf/twitter/blob/main/R/182653057023646941
 <td style="text-align: left;"><a
 href="https://github.com/Francois-Geerolf/twitter/blob/main/pdf/1826530570236469418.pdf">pdf</a></td>
 </tr>
-<tr>
+<tr class="even">
 <td style="text-align: left;"><a
 href="https://x.com/FrancoisGeerolf/status/1816121032928874928">tweet</a></td>
 <td style="text-align: left;">****<br><img
@@ -88,7 +88,7 @@ href="https://github.com/Francois-Geerolf/twitter/blob/main/R/181612103292887492
 <td style="text-align: left;"><a
 href="https://github.com/Francois-Geerolf/twitter/blob/main/pdf/1816121032928874928.pdf">pdf</a></td>
 </tr>
-<tr>
+<tr class="odd">
 <td style="text-align: left;"><a
 href="https://x.com/FrancoisGeerolf/status/1519713704857718784">tweet</a></td>
 <td style="text-align: left;">****<br><img
@@ -98,7 +98,7 @@ href="https://github.com/Francois-Geerolf/twitter/blob/main/R/151971370485771878
 <td style="text-align: left;"><a
 href="https://github.com/Francois-Geerolf/twitter/blob/main/pdf/1519713704857718784.pdf">pdf</a></td>
 </tr>
-<tr>
+<tr class="even">
 <td style="text-align: left;"><a
 href="https://x.com/FrancoisGeerolf/status/1487713516127768576">tweet</a></td>
 <td style="text-align: left;">****<br><img
@@ -108,7 +108,7 @@ href="https://github.com/Francois-Geerolf/twitter/blob/main/R/148771351612776857
 <td style="text-align: left;"><a
 href="https://github.com/Francois-Geerolf/twitter/blob/main/pdf/1487713516127768576.pdf">pdf</a></td>
 </tr>
-<tr>
+<tr class="odd">
 <td style="text-align: left;"><a
 href="https://x.com/FrancoisGeerolf/status/1487364702841749504">tweet</a></td>
 <td style="text-align: left;">****<br><img
