@@ -31,8 +31,9 @@ vous souhaitez que j’ajoute d’autres graphiques.
 <tr class="odd">
 <td style="text-align: left;"><a
 href="https://x.com/FrancoisGeerolf/status/1945587985228980306">tweet</a></td>
-<td style="text-align: left;"><strong>Hausse du déficit depuis
-2017</strong><br><img src="png/1945587985228980306.png" /></td>
+<td style="text-align: left;"><strong>Hausse du déficit de 2017 à 2024:
+baisse des recettes ou hausse des dépenses ?</strong><br><img
+src="png/1945587985228980306.png" /></td>
 <td style="text-align: left;"><a
 href="https://github.com/Francois-Geerolf/twitter/blob/main/R/1945587985228980306.R">R</a></td>
 <td style="text-align: left;"><a
@@ -41,8 +42,9 @@ href="https://github.com/Francois-Geerolf/twitter/blob/main/pdf/1945587985228980
 <tr class="even">
 <td style="text-align: left;"><a
 href="https://x.com/FrancoisGeerolf/status/1938858533727916434">tweet</a></td>
-<td style="text-align: left;"><strong>Salaires des
-cadres</strong><br><img src="png/1938858533727916434.png" /></td>
+<td style="text-align: left;"><strong>Baisse du salaires des cadres IPCH
+vs. IPC, 1996-2023</strong><br><img
+src="png/1938858533727916434.png" /></td>
 <td style="text-align: left;"><a
 href="https://github.com/Francois-Geerolf/twitter/blob/main/R/1938858533727916434.R">R</a></td>
 <td style="text-align: left;"><a
