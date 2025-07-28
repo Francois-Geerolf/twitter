@@ -103,7 +103,7 @@ ggplot(data) +
   ) +
   theme_classic(base_size = 12) +
   theme(
-    legend.position = "bottom",
+    legend.position = c(0.3, 0.75),
     legend.title = element_blank(),
     axis.text.x = element_text(angle = 45, hjust = 1)
   )
