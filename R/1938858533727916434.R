@@ -74,28 +74,37 @@ data <- data_salaires %>%
   pivot_longer(cols = -c(date, Metier), names_to = "Indice", values_to = "Valeur")
 
 # ---- Graphique ----
-
 ggplot(data) +
-  geom_line(aes(x = date, y = Valeur, linetype = Indice, color = Metier)) +
-  geom_hline(yintercept = 100, linetype = "dashed") +
+  geom_line(aes(x = date, y = Valeur, linetype = Indice, color = Metier), size = 1) +
+  geom_hline(yintercept = 100, linetype = "dashed", color = "gray40") +
   geom_label_repel(
     data = data %>% filter(date == max(date)),
-    aes(x = date, y = Valeur, color = Metier, label = percent(Valeur / 100 - 1, accuracy = 0.1, style_positive = "plus"))
+    aes(x = date, y = Valeur, color = Metier,
+        label = percent(Valeur / 100 - 1, accuracy = 0.1, style_positive = "plus")),
+    size = 3, fontface = "bold", show.legend = FALSE,
+    box.padding = 0.35, point.padding = 0.2, max.overlaps = Inf
   ) +
+  scale_color_viridis_d(option = "D", end = 0.85) +
   scale_linetype_manual(values = c("dashed", "solid")) +
   scale_x_date(
-    breaks = seq(1996, 2100, 2) %>% paste0("-01-01") %>% as.Date(),
-    labels = date_format("%Y")
+    date_breaks = "5 years",
+    date_labels = "%Y",
+    expand = expansion(mult = c(0.01, 0.1))
   ) +
-  scale_y_log10(breaks = seq(10, 200, 1)) +
+  scale_y_continuous(
+    breaks = seq(80, 140, 2),
+    labels = function(x) paste0(x, " (", percent(x / 100 - 1, accuracy = 1), ")")
+  ) +
   labs(
-    y = "Pouvoir d'achat du salaire (Indice 100 = 1996)",
-    x = NULL
+    title = "Pouvoir d'achat des salaires par catégorie socioprofessionnelle",
+    subtitle = "Déflaté par l'IPC ou l'IPCH (base 100 en 1996)",
+    y = NULL, x = NULL,
+    caption = "Source : INSEE, calculs @FrancoisGeerolf"
   ) +
-  theme_minimal() +
+  theme_classic(base_size = 12) +
   theme(
-    legend.position = c(0.28, 0.8),
-    legend.title = element_blank()
+    legend.position = "bottom",
+    legend.title = element_blank(),
+    axis.text.x = element_text(angle = 45, hjust = 1)
   )
-
 
