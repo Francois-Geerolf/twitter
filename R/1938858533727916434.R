@@ -86,7 +86,7 @@ ggplot(data) +
     box.padding = 0.35, point.padding = 0.2, max.overlaps = Inf
   ) +
   scale_color_viridis_d(option = "D", end = 0.85, direction = -1) +
-  scale_linetype_manual(values = c("dashed", "solid")) +
+  scale_linetype_manual(values = c("dotted", "solid")) +
   scale_x_date(
     date_breaks = "5 years",
     date_labels = "%Y",
