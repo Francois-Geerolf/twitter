@@ -1,4 +1,4 @@
-# Hausse du déficit depuis 2017
+# Hausse du déficit de 2017 à 2024: baisse des recettes ou hausse des dépenses ?
 # Source du graphique : https://twitter.com/FrancoisGeerolf/status/1945587985228980306
 
 # Chargement des packages et paramètres initiaux (chemins, options, etc.)
@@ -89,7 +89,7 @@ y_vals_2017 <- delta_data |>
 ggplot(data = data) +
   geom_line(aes(x = date, y = value / gdp, color = Line), size = 1) +  # Tracé des courbes en % du PIB
   theme_minimal() +
-  xlab("") + ylab("% du PIB") +
+  scale_color_viridis_d(option = "D", end = 0.7) +
   scale_x_date(
     breaks = seq(1960, 2100, 1) |> paste0("-01-01") |> as.Date(),     # Graduation annuelle
     labels = date_format("%Y")
@@ -130,6 +130,12 @@ ggplot(data = data) +
     color = "black",
     fontface = "bold",
     vjust = -0.5
-  )
+  ) +
+labs(
+  title = "Hausse du déficit de 2017 à 2024",
+  subtitle = "Baisse des recettes ou hausse des dépenses ?",
+  y = "% du PIB", x = NULL,
+  caption = "Source : INSEE, calculs @FrancoisGeerolf"
+)
 
 

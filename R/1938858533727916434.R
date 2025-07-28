@@ -1,4 +1,4 @@
-# Salaires des cadres
+# Baisse du salaires des cadres IPCH vs. IPC, 1996-2023
 # Source du graphique : https://twitter.com/FrancoisGeerolf/status/1938858533727916434
 
 source("_rinit.R")

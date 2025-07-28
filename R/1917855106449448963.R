@@ -37,8 +37,9 @@ data <- url |>
 
 ggplot(data) +
   geom_line(aes(x = date, y = OBS_VALUE, color = TITLE_FR), size = 1) +
+  scale_color_viridis_d(option = "D", end = 0.7) +
   geom_label(
-    data = data |> filter(date == as.Date("1950-01-01")),
+    data = data |> filter(date == as.Date("2000-01-01")),
     aes(x = date, y = OBS_VALUE, label = DEMOGRAPHIE2, color = TITLE_FR),
     size = 3, show.legend = FALSE
   ) +
