@@ -31,7 +31,7 @@ table_graph <- tibble(R = liste_R) |>
   mutate(
     n = file_path_sans_ext(R),
     Titre = sapply(R, function(f) {
-      ligne <- tryCatch(read_lines(f, n_max = 1), error = function(e) "")
+      ligne <- tryCatch(read_lines(paste0("R/", f), n_max = 1), error = function(e) "")
       gsub("^#\\s*", "", ligne)
     }),
     tweet = paste0("[tweet](https://x.com/FrancoisGeerolf/status/", n, ")"),
