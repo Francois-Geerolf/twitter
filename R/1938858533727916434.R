@@ -11,9 +11,9 @@ idbank_codes <- list(
 )
 
 labels_salaires <- c(
-  "Cadres y compris chefs d'entreprise",
+  "Ouvriers",
   "Professions intermédiaires",
-  "Ouvriers"
+  "Cadres y compris chefs d'entreprise"
 )
 
 labels_prix <- c("IPC", "IPCH")
@@ -57,20 +57,21 @@ make_url <- function(idbanks) {
 # ---- Données ----
 
 data_salaires <- read_and_transform(make_url(idbank_codes$salaires), 3, labels_salaires)
-data_prix     <- read_and_transform(make_url(idbank_codes$prix), 2, labels_prix) %>%
+data_prix     <- read_and_transform(make_url(idbank_codes$prix), 2, labels_prix) |>
   pivot_wider(names_from = Label, values_from = OBS_VALUE)
 
 # ---- Fusion et calcul des salaires réels ----
 
-data <- data_salaires %>%
-  rename(Metier = Label) %>%
-  left_join(data_prix, by = "date") %>%
-  arrange(date) %>%
+data <- data_salaires |>
+  rename(Metier = Label) |>
+  mutate(Metier = factor(Metier, levels = labels_salaires)) |>
+  left_join(data_prix, by = "date") |>
+  arrange(date) |>
   transmute(
     date, Metier,
     `Salaire déflaté par l'indice IPCH harmonisé par Eurostat` = IPCH[1] * OBS_VALUE / IPCH,
     `Salaire déflaté par l'indice IPC` = IPC[1] * OBS_VALUE / IPC
-  ) %>%
+  ) |>
   pivot_longer(cols = -c(date, Metier), names_to = "Indice", values_to = "Valeur")
 
 # ---- Graphique ----
@@ -78,13 +79,13 @@ ggplot(data) +
   geom_line(aes(x = date, y = Valeur, linetype = Indice, color = Metier), size = 1) +
   geom_hline(yintercept = 100, linetype = "dashed", color = "gray40") +
   geom_label_repel(
-    data = data %>% filter(date == max(date)),
+    data = data |> filter(date == max(date)),
     aes(x = date, y = Valeur, color = Metier,
         label = percent(Valeur / 100 - 1, accuracy = 0.1, style_positive = "plus")),
     size = 3, fontface = "bold", show.legend = FALSE,
     box.padding = 0.35, point.padding = 0.2, max.overlaps = Inf
   ) +
-  scale_color_viridis_d(option = "D", end = 0.85) +
+  scale_color_viridis_d(option = "D", end = 0.85, direction = -1) +
   scale_linetype_manual(values = c("dashed", "solid")) +
   scale_x_date(
     date_breaks = "5 years",
@@ -93,7 +94,7 @@ ggplot(data) +
   ) +
   scale_y_continuous(
     breaks = seq(80, 140, 2),
-    labels = function(x) paste0(x, " (", percent(x / 100 - 1, accuracy = 1), ")")
+    labels = function(x) paste0(x, " (", percent(x / 100 - 1, accuracy = 1, style_positive = "plus"), ")")
   ) +
   labs(
     title = "Pouvoir d'achat des salaires par catégorie socioprofessionnelle",
