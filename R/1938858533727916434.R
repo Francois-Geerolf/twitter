@@ -88,9 +88,8 @@ ggplot(data) +
   scale_color_viridis_d(option = "D", end = 0.85, direction = -1) +
   scale_linetype_manual(values = c("dotted", "solid")) +
   scale_x_date(
-    date_breaks = "5 years",
-    date_labels = "%Y",
-    expand = expansion(mult = c(0.01, 0.1))
+    date_breaks = "1 year",
+    date_labels = "%Y"
   ) +
   scale_y_continuous(
     breaks = seq(80, 140, 2),
