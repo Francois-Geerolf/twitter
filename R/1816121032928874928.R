@@ -78,8 +78,9 @@ ggplot(data) +
     y = "Indice de production industrielle vs. mai 2017\n(hors mars-juin 2020)",
     color = NULL
   ) +
+  scale_color_viridis_d(option = "D", end = 0.7) +
   theme_minimal(base_size = 13) +
   theme(
-    legend.position = c(0.7, 0.9),
+    legend.position = c(0.65, 0.9),
     legend.title = element_blank()
   )

@@ -55,6 +55,7 @@ ggplot(data) +
     breaks = seq(0, 1e6, 20000),
     labels = ~ format(.x, big.mark = " ")
   ) +
+  scale_color_viridis_d(option = "D", end = 0.7) +
   labs(
     x = NULL,
     y = "Nombre sur les 12 derniers mois\nFrance Métropolitaine",

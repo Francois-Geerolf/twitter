@@ -39,7 +39,7 @@ data <- base_url |>
 ggplot(data) +
   geom_line(aes(x = date, y = value_d12, color = variable), size = 1) +
   scale_color_manual(
-    values = c("IPC" = "red", "IRL" = "blue"),
+    values = c("IPC" = viridis(3)[2], "IRL" = viridis(3)[1]),
     labels = c(
       "IRL" = "Inflation IRL :\nMoyenne sur 12 mois de l’IPC hors loyers, hors tabac",
       "IPC" = "Inflation IPC hors loyers, hors tabac :\nGlissement annuel"
@@ -59,7 +59,7 @@ ggplot(data) +
   ) +
   theme_minimal(base_size = 13) +
   theme(
-    legend.position = c(0.45, 0.9),
+    legend.position = c(0.3, 0.9),
     legend.title = element_blank(),
     legend.key.size = unit(1, "cm")
   )

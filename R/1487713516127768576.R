@@ -40,7 +40,7 @@ ggplot(data) +
   geom_line(aes(x = TIME_PERIOD, y = OBS_VALUE, color = TITLE_FR), size = 1) +
   geom_hline(yintercept = 100, linetype = "dotted", color = "grey50") +
   scale_x_date(
-    breaks = seq(2016, 2025, 1) |> paste0("-01-01") |> as.Date(),
+    breaks = seq(2016, 2100, 1) |> paste0("-01-01") |> as.Date(),
     labels = date_format("%Y")
   ) +
   scale_y_log10(
@@ -53,8 +53,9 @@ ggplot(data) +
     )
   ) +
   theme_minimal(base_size = 13) +
+  scale_color_viridis_d(option = "D", end = 0.9) +
   theme(
-    legend.position = c(0.4, 0.85),
+    legend.position = c(0.3, 0.85),
     legend.title = element_blank(),
     axis.text.x = element_text(angle = 45, hjust = 1)
   )

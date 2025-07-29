@@ -53,8 +53,9 @@ ggplot(data) +
     y = "Augmentation vs. Octobre 2021"
   ) +
   theme_minimal(base_size = 13) +
+  scale_color_viridis_d(option = "D", end = 0.8) +
   theme(
-    legend.position = c(0.25, 0.8),
+    legend.position = c(0.2, 0.85),
     legend.title = element_blank(),
     axis.text.x = element_text(angle = 45, hjust = 1)
   )

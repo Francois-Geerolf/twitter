@@ -61,6 +61,7 @@ ggplot(data) +
     y = NULL
   ) +
   theme_minimal(base_size = 13) +
+  scale_color_viridis_d(option = "D", end = 0.9) +
   theme(
     legend.position = c(0.28, 0.87),
     legend.title = element_blank(),
