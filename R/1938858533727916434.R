@@ -99,7 +99,7 @@ ggplot(data) +
     title = "Pouvoir d'achat des salaires par catégorie socioprofessionnelle",
     subtitle = "Déflaté par l'IPC ou l'IPCH (base 100 en 1996)",
     y = NULL, x = NULL,
-    caption = "Source : INSEE, calculs @FrancoisGeerolf"
+    #caption = "Source : INSEE, calculs @FrancoisGeerolf"
   ) +
   theme_classic(base_size = 12) +
   theme(
