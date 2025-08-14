@@ -41,8 +41,8 @@ data <- url |>
 ggplot(data) +
   geom_line(aes(x = date, y = OBS_VALUE, color = `Forme-Vente`), size = 1) +
   scale_y_continuous(
-    breaks = seq(0, 500, 2),
-    labels = ~ percent(.x / 100 - 1)
+    breaks = seq(80, 140, 2),
+    labels = function(x) paste0(x, " (", percent(x / 100 - 1, accuracy = 1, style_positive = "plus"), ")")
   ) +
   scale_x_date(
     breaks = seq(start_date, max(data$date, na.rm = TRUE), by = "2 months"),
@@ -50,7 +50,7 @@ ggplot(data) +
   ) +
   labs(
     x = NULL,
-    y = "Augmentation vs. Octobre 2021"
+    y = "Indice 100 = Octobre 2021\n(Augmentation vs. Octobre 2021)"
   ) +
   theme_minimal(base_size = 13) +
   scale_color_viridis_d(option = "D", end = 0.8) +
