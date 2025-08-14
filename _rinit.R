@@ -15,6 +15,10 @@ packages <- c(
   "rmarkdown"
 )
 
+
+invisible(Sys.setlocale("LC_TIME", "fr_FR.UTF-8"))
+invisible(Sys.setenv(TZ = "Europe/Paris"))
+
 # # Install any missing packages
 # installed <- packages %in% rownames(installed.packages())
 # if (any(!installed)) {
