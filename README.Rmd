@@ -30,11 +30,12 @@ table_graph <- tibble(R = liste_R) |>
   arrange(desc(R)) |>
   mutate(
     n = file_path_sans_ext(R),
+    numero = str_extract(n, "^\\d+"),
     Titre = sapply(R, function(f) {
       ligne <- tryCatch(read_lines(paste0("R/", f), n_max = 1), error = function(e) "")
       gsub("^#\\s*", "", ligne)
     }),
-    tweet = paste0("[tweet](https://x.com/FrancoisGeerolf/status/", n, ")"),
+    tweet = paste0("[tweet](https://x.com/FrancoisGeerolf/status/", numero, ")"),
     R = paste0("[R](https://github.com/Francois-Geerolf/twitter/blob/main/R/", n, ".R)"),
     pdf = paste0("[pdf](https://github.com/Francois-Geerolf/twitter/blob/main/pdf/", n, ".pdf)"),
     `Graphique (mis à jour)` = paste0("**", Titre, "**<br>![](png/", n, ".png)")
